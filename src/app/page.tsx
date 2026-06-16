@@ -270,7 +270,7 @@ export default function Dashboard() {
                 </div>
               </CardHeader>
               
-              <CardContent className="pt-4 flex flex-col justify-between h-[390px]">
+              <CardContent className="pt-4 flex flex-col justify-between md:h-[390px] h-auto min-h-[390px]">
                 {activeTab === "composition" ? (
                   <div className="flex flex-col justify-between h-full">
                     <div className="relative flex items-center justify-center" style={{ height: "220px" }}>
@@ -308,10 +308,10 @@ export default function Dashboard() {
                   </div>
                 ) : (
                   // advanced ai hud anatomy interface
-                  <div className="grid grid-cols-12 gap-4 h-full items-center">
+                  <div className="grid grid-cols-1 md:grid-cols-12 gap-4 h-full items-center">
                     
                     {/* diagnostic outline body.png overlay */}
-                    <div className="relative col-span-7 h-full w-full flex justify-center items-center bg-black border border-muted/20 overflow-hidden">
+                    <div className="relative col-span-1 md:col-span-7 h-full w-full flex justify-center items-center bg-black border border-muted/20 overflow-hidden">
                       <img 
                         src="/assets/body.png" 
                         alt="Anatomical Body Outline" 
@@ -408,7 +408,7 @@ export default function Dashboard() {
                     </div>
 
                     {/* hud active diagnostics details panel */}
-                    <div className="col-span-5 flex flex-col justify-between h-full bg-muted/20 p-4 border border-muted/50 font-mono">
+                    <div className="col-span-1 md:col-span-5 flex flex-col justify-between h-full bg-muted/20 p-4 border border-muted/50 font-mono">
                       <div>
                         <span className="text-[10px] uppercase tracking-wider font-extrabold text-[#22c55e] block mb-1">SYNTHETIC INFERENCE</span>
                         <h4 className="text-base font-black text-foreground flex items-center gap-1.5">
@@ -529,7 +529,7 @@ export default function Dashboard() {
                 {/* sub-targets breakdown metrics */}
                 <div className="border-t pt-4 space-y-3 mt-2 font-mono">
                   <h5 className="text-[10px] font-extrabold uppercase tracking-widest text-[#22c55e]">TARGET METRICS BREAKDOWN</h5>
-                  <div className="grid grid-cols-2 gap-x-4 gap-y-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3">
                     {subTargetsData.map((tgt, i) => (
                       <div key={i} className="space-y-1">
                         <div className="flex justify-between text-[10px] font-bold text-muted-foreground">
@@ -1015,7 +1015,7 @@ export default function Dashboard() {
             <CardHeader className="pb-2 border-b">
               <CardTitle className="text-xs font-bold uppercase tracking-wider text-[#22c55e]">Today&apos;s Quick Stats</CardTitle>
             </CardHeader>
-            <CardContent className="pt-4 grid grid-cols-2 gap-3">
+            <CardContent className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
                 { label: "Total Patients", value: "124", icon: "🧑‍🤝‍🧑", color: "#3b82f6" },
                 { label: "Doctors On Duty", value: "12", icon: "🩺", color: "#22c55e" },
