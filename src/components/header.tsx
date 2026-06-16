@@ -430,6 +430,8 @@ export function Header() {
             <Button
               variant="ghost"
               size="icon"
+              aria-label="Toggle notifications panel"
+              title="Notifications"
               className={`relative hover:bg-muted rounded-lg h-11 w-11 ${showNotifications ? "bg-muted" : ""}`}
               onClick={() => setShowNotifications(!showNotifications)}
             >
@@ -479,8 +481,8 @@ export function Header() {
 
           <div className="flex items-center gap-3.5 cursor-pointer group">
             <div className="flex flex-col text-right">
-              <span className="text-base font-semibold leading-tight group-hover:text-primary transition-colors font-mono">Prof. Dr. Md. Mahbubur Rahman</span>
-              <span className="text-xs text-muted-foreground font-mono">Neurologist</span>
+              <span className="text-base font-semibold leading-tight group-hover:text-primary transition-colors">Prof. Dr. Md. Mahbubur Rahman</span>
+              <span className="text-xs text-muted-foreground">Neurologist</span>
             </div>
             <Avatar className="h-10 w-10 border-2 border-primary/20 rounded-full">
               <AvatarImage src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=256&q=80" alt="Prof. Dr. Md. Mahbubur Rahman" className="rounded-full" />
