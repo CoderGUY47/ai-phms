@@ -66,9 +66,20 @@ Patient-provided histories are often fragmented, consisting of scattered physica
 
 <div align="center">
 
-![AI-PHMS Command Center](./AI-PHMS%20_%20Prescription%20&%20Health%20Analytics.png)
+<table>
+  <tr>
+    <td valign="top" width="55%">
+      <p align="center"><strong>Desktop Command Center</strong></p>
+      <img src="./AI-PHMS%20_%20Prescription%20&%20Health%20Analytics.png" alt="AI-PHMS Command Center" />
+    </td>
+    <td valign="top" width="45%">
+      <p align="center"><strong>Mobile Responsive View</strong></p>
+      <img src="./mobile%20responsive.png" alt="AI-PHMS Mobile View" />
+    </td>
+  </tr>
+</table>
 
-*🩺 AI-PHMS Command Center — Interactive Dashboard with Neural Anatomy Radar, Vitals & Caloric Tracking.*
+*🩺 AI-PHMS Interface — Desktop Command Center & Mobile Responsive layouts side-by-side.*
 
 </div>
 
