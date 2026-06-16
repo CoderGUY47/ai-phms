@@ -14,6 +14,9 @@ import {
   Calendar,
   FileText,
   Lock,
+  LogIn,
+  UserPlus,
+  ShieldCheck,
   Sparkles,
 } from "lucide-react";
 import { useState } from "react";
@@ -88,6 +91,8 @@ export function Sidebar() {
           <Button
             variant="ghost"
             size="icon"
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            title={isOpen ? "Close navigation menu" : "Open navigation menu"}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -125,6 +130,7 @@ export function Sidebar() {
           {/* core system route navigation links */}
           <Link
             href="/"
+            onClick={() => setIsOpen(false)}
             className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
             <LayoutDashboard className="h-4 w-4" />
@@ -133,6 +139,7 @@ export function Sidebar() {
 
           <Link
             href="/patient"
+            onClick={() => setIsOpen(false)}
             className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/patient" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
             <Activity className="h-4 w-4" />
@@ -141,6 +148,7 @@ export function Sidebar() {
 
           <Link
             href="/patients"
+            onClick={() => setIsOpen(false)}
             className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname.startsWith("/patients") ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
             <Users className="h-4 w-4" />
@@ -149,6 +157,7 @@ export function Sidebar() {
 
           <Link
             href="/doctor"
+            onClick={() => setIsOpen(false)}
             className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/doctor" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
             <Stethoscope className="h-4 w-4" />
@@ -157,6 +166,7 @@ export function Sidebar() {
 
           <Link
             href="/doctors"
+            onClick={() => setIsOpen(false)}
             className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname.startsWith("/doctors") ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
             <Stethoscope className="h-4 w-4" />
@@ -165,6 +175,7 @@ export function Sidebar() {
 
           <Link
             href="/appointments"
+            onClick={() => setIsOpen(false)}
             className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/appointments" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
             <Calendar className="h-4 w-4" />
@@ -173,6 +184,7 @@ export function Sidebar() {
 
           <Link
             href="/reports"
+            onClick={() => setIsOpen(false)}
             className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/reports" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
             <FileText className="h-4 w-4" />
@@ -181,9 +193,10 @@ export function Sidebar() {
 
           <Link
             href="/admin"
+            onClick={() => setIsOpen(false)}
             className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/admin" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
-            <Lock className="h-4 w-4" />
+            <ShieldCheck className="h-4 w-4" />
             <span>Admin Portal</span>
           </Link>
 
@@ -194,30 +207,34 @@ export function Sidebar() {
 
           <Link
             href="/login"
+            onClick={() => setIsOpen(false)}
             className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/login" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
-            <Lock className="h-4 w-4" />
+            <LogIn className="h-4 w-4" />
             <span>Login</span>
           </Link>
 
           <Link
             href="/register"
+            onClick={() => setIsOpen(false)}
             className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/register" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
-            <Lock className="h-4 w-4" />
+            <UserPlus className="h-4 w-4" />
             <span>Register</span>
           </Link>
 
           <Link
             href="/privacy"
+            onClick={() => setIsOpen(false)}
             className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/privacy" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
-            <Lock className="h-4 w-4" />
+            <ShieldCheck className="h-4 w-4" />
             <span>Privacy &amp; Security</span>
           </Link>
 
           <Link
             href="/terms"
+            onClick={() => setIsOpen(false)}
             className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/terms" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
             <FileText className="h-4 w-4" />
