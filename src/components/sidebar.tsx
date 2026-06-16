@@ -261,6 +261,8 @@ export function Sidebar() {
             </h4>
             <Link
               href="/patient"
+              aria-label="Book an appointment in the Patient Portal"
+              title="Book an appointment"
               className="inline-flex items-center gap-1.5 text-[10px] font-bold text-[#22c55e] hover:underline mt-1.5 font-mono"
             >
               Best Health Care Here <ChevronRight className="h-3 w-3" />
