@@ -1022,10 +1022,14 @@ export default function Dashboard() {
                 { label: "Appointments", value: "38", icon: "📅", color: "#a855f7" },
                 { label: "Scans Done", value: "5", icon: "📋", color: "#f59e0b" },
               ].map((stat) => (
-                <div key={stat.label} className="p-3 border border-border/60 bg-muted/20 flex flex-col gap-1">
-                  <span className="text-lg">{stat.icon}</span>
-                  <span className="text-base font-black text-foreground" style={{ color: stat.color }}>{stat.value}</span>
-                  <span className="text-[10px] text-muted-foreground font-bold uppercase leading-tight">{stat.label}</span>
+                <div key={stat.label} className="p-3 border border-border/60 bg-[#1f2937] text-white flex items-center gap-3 rounded-none">
+                  <div className="h-10 w-10 shrink-0 flex items-center justify-center bg-black/30 text-lg rounded-none">
+                    {stat.icon}
+                  </div>
+                  <div className="flex flex-col min-w-0">
+                    <span className="text-base font-black leading-tight" style={{ color: stat.color }}>{stat.value}</span>
+                    <span className="text-[9px] text-gray-300 font-bold uppercase tracking-wider mt-0.5 leading-tight">{stat.label}</span>
+                  </div>
                 </div>
               ))}
             </CardContent>
