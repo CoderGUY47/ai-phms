@@ -377,7 +377,11 @@ export function Header() {
 
             {/* no results state */}
             {showSuggestions && searchQuery.trim().length > 0 && totalSuggestions === 0 && (
-              <div className="absolute top-full left-0 right-0 mt-1.5 z-50 bg-card/95 backdrop-blur-xl border border-border rounded-xl shadow-2xl p-4 flex items-center gap-3">
+              <div
+                role="alert"
+                aria-live="polite"
+                className="absolute top-full left-0 right-0 mt-1.5 z-50 bg-card/95 backdrop-blur-xl border border-border rounded-xl shadow-2xl p-4 flex items-center gap-3"
+              >
                 <Search className="h-4 w-4 text-muted-foreground shrink-0" />
                 <div>
                   <p className="text-sm text-foreground">No matches for <span className="font-semibold text-primary">&ldquo;{searchQuery}&rdquo;</span></p>
