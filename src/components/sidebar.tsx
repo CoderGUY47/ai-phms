@@ -228,7 +228,7 @@ export function Sidebar() {
         {/* sidebar footer containing decorative widgets and system options */}
         <div className="sidebar-widgets px-4 py-4 shrink-0 border-t space-y-4">
           {/* banner image displaying medical and heart monitoring graphics */}
-          <div className="w-full flex justify-center items-center overflow-hidden border border-border bg-black">
+          <div className="w-full flex justify-center items-center overflow-hidden">
             <img
               src="/assets/left-bottom.png"
               alt="Sidebar Analytics Panel"
