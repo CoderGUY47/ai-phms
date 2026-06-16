@@ -21,18 +21,18 @@ export default function QuickStatsPanel() {
         {stats.map((stat) => (
           <div
             key={stat.label}
-            className="p-3 border border-border/60 bg-[#1f2937] text-white flex items-center gap-3 rounded-none"
+            className="p-3 border border-border/60 bg-muted/30 flex items-center gap-3 rounded-none"
           >
             <div className="h-10 w-10 shrink-0 flex items-center justify-center text-lg rounded-none">
               {stat.icon}
             </div>
             <div className="flex flex-col min-w-0">
-              <span className="text-xs sm:text-sm font-medium leading-tight" style={{ color: stat.color }}>
+              <div className="text-[12px] font-normal leading-tight" style={{ color: stat.color }}>
                 {stat.value}
-              </span>
-              <span className="text-[8px] sm:text-[9px] text-gray-300 font-normal uppercase tracking-wider mt-0.5 leading-tight">
+              </div>
+              <div className="text-[8px] text-muted-foreground font-normal uppercase tracking-wider mt-0.5 leading-tight">
                 {stat.label}
-              </span>
+              </div>
             </div>
           </div>
         ))}
