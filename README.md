@@ -66,20 +66,30 @@ Patient-provided histories are often fragmented, consisting of scattered physica
 
 <div align="center">
 
-<table>
+### 🖥️ Desktop Command Center
+![AI-PHMS Desktop Command Center](./AI-PHMS%20_%20Prescription%20&%20Health%20Analytics.png)
+
+<br/>
+
+### 📱 Mobile Responsive Views
+<table width="100%">
   <tr>
-    <td valign="top" width="55%">
-      <p align="center"><strong>Desktop Command Center</strong></p>
-      <img src="./AI-PHMS%20_%20Prescription%20&%20Health%20Analytics.png" alt="AI-PHMS Command Center" />
+    <td valign="top" width="33.33%" align="center">
+      <p align="center"><strong>Patient Portal</strong></p>
+      <img src="./mobile.png" alt="Patient Portal Mobile" />
     </td>
-    <td valign="top" width="45%">
-      <p align="center"><strong>Mobile Responsive View</strong></p>
-      <img src="./mobile%20responsive.png" alt="AI-PHMS Mobile View" />
+    <td valign="top" width="33.33%" align="center">
+      <p align="center"><strong>Doctor Portal</strong></p>
+      <img src="./mobile1.png" alt="Doctor Portal Mobile" />
+    </td>
+    <td valign="top" width="33.33%" align="center">
+      <p align="center"><strong>Admin Portal</strong></p>
+      <img src="./mobile2.png" alt="Admin Portal Mobile" />
     </td>
   </tr>
 </table>
 
-*🩺 AI-PHMS Interface — Desktop Command Center & Mobile Responsive layouts side-by-side.*
+*🩺 AI-PHMS UI Preview — Desktop Command Center and Mobile Responsive views.*
 
 </div>
 
