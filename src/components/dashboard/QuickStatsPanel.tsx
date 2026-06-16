@@ -17,20 +17,20 @@ export default function QuickStatsPanel() {
           Today&apos;s Quick Stats
         </CardTitle>
       </CardHeader>
-      <CardContent className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <CardContent className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
         {stats.map((stat) => (
           <div
             key={stat.label}
-            className="p-3 border border-border/60 bg-muted/30 flex items-center gap-3 rounded-none"
+            className="p-3 border border-border/60 bg-muted/30 flex items-center gap-2 rounded-none"
           >
-            <div className="h-10 w-10 shrink-0 flex items-center justify-center text-lg rounded-none">
+            <div className="h-10 w-10 shrink-0 flex items-center justify-center rounded-none" style={{ fontSize: "20px" }}>
               {stat.icon}
             </div>
             <div className="flex flex-col min-w-0">
-              <div className="text-[12px] font-normal leading-tight" style={{ color: stat.color }}>
+              <div className="font-bold leading-tight" style={{ color: stat.color, fontSize: "14px" }}>
                 {stat.value}
               </div>
-              <div className="text-[8px] text-muted-foreground font-normal uppercase tracking-wider mt-0.5 leading-tight">
+              <div className="text-muted-foreground font-semibold uppercase tracking-wider mt-0.5 leading-tight" style={{ fontSize: "10px" }}>
                 {stat.label}
               </div>
             </div>
