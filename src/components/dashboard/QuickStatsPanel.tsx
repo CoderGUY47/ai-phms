@@ -12,16 +12,17 @@ export default function QuickStatsPanel() {
 
   return (
     <Card className="border shadow-none rounded-none bg-card/60 backdrop-blur-md">
-      <CardHeader className="pb-2 border-b">
+      <CardHeader className="p-3 pb-2 border-b">
         <CardTitle className="text-xs font-bold uppercase tracking-wider text-[#22c55e]">
           Today&apos;s Quick Stats
         </CardTitle>
       </CardHeader>
-      <CardContent className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
+      <CardContent className="p-3 pt-2 pb-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
         {stats.map((stat) => (
           <div
             key={stat.label}
-            className="p-3 border border-border/60 bg-muted/30 flex items-center gap-2 rounded-none"
+            className="p-3 bg-muted flex items-center gap-2 rounded-none"
+            style={{ border: "1px solid var(--border)" }}
           >
             <div className="h-10 w-10 shrink-0 flex items-center justify-center rounded-none" style={{ fontSize: "20px" }}>
               {stat.icon}
