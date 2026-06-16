@@ -36,7 +36,7 @@ export default function PrescriptionIngestionFeed({
     <Card className="border shadow-none rounded-none bg-card/60 backdrop-blur-md">
       <CardHeader className="pb-2 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
         <div>
-          <CardTitle className="text-sm font-bold text-foreground font-mono font-bold">
+          <CardTitle className="text-sm font-bold text-foreground font-mono">
             PRESCRIPTION INGESTION FEED
           </CardTitle>
           <CardDescription className="text-xs font-normal">

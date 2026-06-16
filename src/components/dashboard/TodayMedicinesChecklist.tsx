@@ -30,7 +30,7 @@ export default function TodayMedicinesChecklist() {
           >
             <div className="flex items-center gap-2">
               <div
-                className={`h-3 w-3 border flex-shrink-0 flex items-center justify-center ${
+                className={`h-3 w-3 border shrink-0 flex items-center justify-center ${
                   med.done ? "bg-[#22c55e] border-[#22c55e]" : "border-muted-foreground"
                 }`}
               >
