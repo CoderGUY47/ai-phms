@@ -810,7 +810,7 @@ export default function Dashboard() {
                 <div className="flex justify-between items-center border-t border-muted/10 pt-1 py-0.5">
                   <span className="text-muted-foreground uppercase text-[9px] tracking-wide">Physician</span>
                   <span className="inline-block px-1.5 py-0.5 border border-[#22c55e]/30 text-[#22c55e] bg-[#22c55e]/5 font-bold text-[9px] rounded-none">
-                    DR. GREGORY HOUSE
+                    PROF. DR. MD. MAHBUBUR RAHMAN
                   </span>
                 </div>
               </div>

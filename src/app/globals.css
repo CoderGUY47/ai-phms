@@ -344,9 +344,9 @@
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* Force border-radius rounded-lg (8px) globally on all cards, inputs, buttons, wrappers, and override sharp classes */
+/* Force border-radius rounded-xs (2px) globally on all cards, inputs, buttons, wrappers, and override sharp classes */
 .rounded-none {
-  border-radius: 8px !important;
+  border-radius: 2px !important;
 }
 
 .card, 
@@ -360,5 +360,59 @@ textarea,
 dialog,
 .dialog-content,
 [class*="rounded"] {
-  border-radius: 8px !important;
+  border-radius: 2px !important;
+}
+
+/* Force all Badge components to be rounded-xs (2px) and style them as neon badges */
+.group\/badge,
+[data-slot="badge"],
+[class*="badge"],
+span[class*="badge"] {
+  border-radius: 2px !important;
+  font-weight: 700 !important;
+  background-color: rgba(34, 197, 94, 0.12) !important;
+  color: #22c55e !important;
+  border: 1px solid rgba(34, 197, 94, 0.5) !important;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.2), inset 0 0 2px rgba(34, 197, 94, 0.2) !important;
+  text-shadow: 0 0 4px rgba(34, 197, 94, 0.15) !important;
+}
+
+/* Destructive / Suspended Badge -> Neon Red style */
+.group\/badge.bg-destructive,
+.group\/badge.border-destructive,
+[data-slot="badge"].bg-destructive,
+[data-slot="badge"].border-destructive,
+.group\/badge[class*="bg-destructive"],
+.group\/badge[class*="border-destructive"] {
+  background-color: rgba(239, 68, 68, 0.12) !important;
+  color: #ef4444 !important;
+  border: 1px solid rgba(239, 68, 68, 0.5) !important;
+  box-shadow: 0 0 6px rgba(239, 68, 68, 0.2), inset 0 0 2px rgba(239, 68, 68, 0.2) !important;
+  text-shadow: 0 0 4px rgba(239, 68, 68, 0.15) !important;
+}
+
+/* Secondary / Dates -> Neon Amber/Orange style */
+.group\/badge.bg-secondary,
+.group\/badge.border-secondary,
+[data-slot="badge"].bg-secondary,
+[data-slot="badge"].border-secondary,
+.group\/badge[class*="bg-secondary"],
+.group\/badge[class*="border-secondary"] {
+  background-color: rgba(245, 158, 11, 0.12) !important;
+  color: #f59e0b !important;
+  border: 1px solid rgba(245, 158, 11, 0.5) !important;
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.2), inset 0 0 2px rgba(245, 158, 11, 0.2) !important;
+  text-shadow: 0 0 4px rgba(245, 158, 11, 0.15) !important;
+}
+
+/* Outline / Medicine Classification / Lab Tests -> Neon Cyan/Blue style */
+.group\/badge.border-border,
+.group\/badge.border-secondary-foreground\/30,
+[data-slot="badge"].border-border,
+[data-slot="badge"].border-secondary-foreground\/30 {
+  background-color: rgba(14, 165, 233, 0.12) !important;
+  color: #0ea5e9 !important;
+  border: 1px solid rgba(14, 165, 233, 0.5) !important;
+  box-shadow: 0 0 6px rgba(14, 165, 233, 0.2), inset 0 0 2px rgba(14, 165, 233, 0.2) !important;
+  text-shadow: 0 0 4px rgba(14, 165, 233, 0.15) !important;
 }

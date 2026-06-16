@@ -125,7 +125,7 @@ export function Sidebar() {
           {/* core system route navigation links */}
           <Link
             href="/"
-            className={`flex items-center gap-2.5 px-3 py-2.5 text-muted-foreground hover:bg-muted hover:text-foreground transition-all duration-150 ${pathname === "/" ? "text-foreground font-bold bg-muted/40" : ""}`}
+            className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
             <LayoutDashboard className="h-4 w-4" />
             <span>Hospital Dashboard</span>
@@ -133,7 +133,7 @@ export function Sidebar() {
 
           <Link
             href="/patient"
-            className={`flex items-center gap-2.5 px-3 py-2.5 text-muted-foreground hover:bg-muted hover:text-foreground transition-all duration-150 ${pathname === "/patient" ? "text-foreground font-bold bg-muted/40" : ""}`}
+            className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/patient" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
             <Activity className="h-4 w-4" />
             <span>Patient Portal (AI)</span>
@@ -141,7 +141,7 @@ export function Sidebar() {
 
           <Link
             href="/patients"
-            className={`flex items-center gap-2.5 px-3 py-2.5 text-muted-foreground hover:bg-muted hover:text-foreground transition-all duration-150 ${pathname.startsWith("/patients") ? "text-foreground font-bold bg-muted/40" : ""}`}
+            className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname.startsWith("/patients") ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
             <Users className="h-4 w-4" />
             <span>Patients Directory</span>
@@ -149,7 +149,7 @@ export function Sidebar() {
 
           <Link
             href="/doctor"
-            className={`flex items-center gap-2.5 px-3 py-2.5 text-muted-foreground hover:bg-muted hover:text-foreground transition-all duration-150 ${pathname === "/doctor" ? "text-foreground font-bold bg-muted/40" : ""}`}
+            className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/doctor" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
             <Stethoscope className="h-4 w-4" />
             <span>Doctor Portal</span>
@@ -157,7 +157,7 @@ export function Sidebar() {
 
           <Link
             href="/doctors"
-            className={`flex items-center gap-2.5 px-3 py-2.5 text-muted-foreground hover:bg-muted hover:text-foreground transition-all duration-150 ${pathname.startsWith("/doctors") ? "text-foreground font-bold bg-muted/40" : ""}`}
+            className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname.startsWith("/doctors") ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
             <Stethoscope className="h-4 w-4" />
             <span>Doctors Directory</span>
@@ -165,7 +165,7 @@ export function Sidebar() {
 
           <Link
             href="/appointments"
-            className={`flex items-center gap-2.5 px-3 py-2.5 text-muted-foreground hover:bg-muted hover:text-foreground transition-all duration-150 ${pathname === "/appointments" ? "text-foreground font-bold bg-muted/40" : ""}`}
+            className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/appointments" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
             <Calendar className="h-4 w-4" />
             <span>Appointments</span>
@@ -173,10 +173,18 @@ export function Sidebar() {
 
           <Link
             href="/reports"
-            className={`flex items-center gap-2.5 px-3 py-2.5 text-muted-foreground hover:bg-muted hover:text-foreground transition-all duration-150 ${pathname === "/reports" ? "text-foreground font-bold bg-muted/40" : ""}`}
+            className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/reports" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
             <FileText className="h-4 w-4" />
             <span>Reports</span>
+          </Link>
+
+          <Link
+            href="/admin"
+            className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/admin" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
+          >
+            <Lock className="h-4 w-4" />
+            <span>Admin Portal</span>
           </Link>
 
           {/* category header for auth and policy pages */}
@@ -186,7 +194,7 @@ export function Sidebar() {
 
           <Link
             href="/login"
-            className={`flex items-center gap-2.5 px-3 py-2.5 text-muted-foreground hover:bg-muted hover:text-foreground transition-all duration-150 ${pathname === "/login" ? "text-foreground font-bold bg-muted/40" : ""}`}
+            className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/login" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
             <Lock className="h-4 w-4" />
             <span>Login</span>
@@ -194,7 +202,7 @@ export function Sidebar() {
 
           <Link
             href="/register"
-            className={`flex items-center gap-2.5 px-3 py-2.5 text-muted-foreground hover:bg-muted hover:text-foreground transition-all duration-150 ${pathname === "/register" ? "text-foreground font-bold bg-muted/40" : ""}`}
+            className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/register" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
             <Lock className="h-4 w-4" />
             <span>Register</span>
@@ -202,7 +210,7 @@ export function Sidebar() {
 
           <Link
             href="/privacy"
-            className={`flex items-center gap-2.5 px-3 py-2.5 text-muted-foreground hover:bg-muted hover:text-foreground transition-all duration-150 ${pathname === "/privacy" ? "text-foreground font-bold bg-muted/40" : ""}`}
+            className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/privacy" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
             <Lock className="h-4 w-4" />
             <span>Privacy &amp; Security</span>
@@ -210,7 +218,7 @@ export function Sidebar() {
 
           <Link
             href="/terms"
-            className={`flex items-center gap-2.5 px-3 py-2.5 text-muted-foreground hover:bg-muted hover:text-foreground transition-all duration-150 ${pathname === "/terms" ? "text-foreground font-bold bg-muted/40" : ""}`}
+            className={`flex items-center gap-2.5 px-3 py-2.5 transition-all duration-150 ${pathname === "/terms" ? "bg-[#22c55e] text-white font-bold" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}
           >
             <FileText className="h-4 w-4" />
             <span>Terms &amp; Conditions</span>
