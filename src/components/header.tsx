@@ -114,15 +114,16 @@ export function Header() {
 
   return (
     <header className="hidden md:flex flex-col w-full border-b bg-card sticky top-0 z-40">
-      <div className="flex h-20 w-full items-center justify-between px-8 gap-4">
+      <div className="flex h-24 w-full items-center justify-between px-8 py-4 gap-4">
         {/* search input with autocomplete */}
-        <form onSubmit={handleSearchSubmit} className="flex items-center w-full max-w-[900px] relative gap-3">
+        <form onSubmit={handleSearchSubmit} className="flex items-center w-full max-w-[900px] relative">
           <div className="relative flex-1">
-            <Search className="absolute left-3.5 top-3 h-5 w-5 text-muted-foreground pointer-events-none z-10" />
+            <Search className="absolute left-3.5 top-[14px] h-5 w-5 text-muted-foreground pointer-events-none z-10" />
             <Input
               type="search"
               placeholder="Search patients, doctors, medical logs..."
-              className="pl-11 pr-12 h-11 w-full bg-muted/40 border border-primary/30 text-base rounded-lg font-mono focus-visible:ring-1 focus-visible:ring-primary"
+              className="pl-11 pr-[130px] h-12 w-full bg-muted/40 text-base rounded-lg font-mono focus-visible:ring-1 focus-visible:ring-primary"
+              style={{ border: "1px solid var(--border)" }}
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value);
@@ -135,30 +136,32 @@ export function Header() {
               autoComplete="off"
             />
 
-            {/* clear button - clears the search query */}
-            {searchQuery && (
-              <button
-                type="button"
-                className="absolute right-10 top-3 h-5 w-5 text-muted-foreground hover:text-foreground transition-colors"
-                onClick={() => { setSearchQuery(""); setShowSuggestions(false); }}
-              >
-                <X className="h-4 w-4" />
-              </button>
-            )}
-
-            {/* dialog trigger button for advanced filters */}
-            <Dialog open={showFilters} onOpenChange={setShowFilters}>
-              <DialogTrigger render={
-                <Button
+            {/* absolute controls inside the input box on the right */}
+            <div className="absolute right-1.5 top-2 flex items-center gap-1.5 z-20">
+              {/* clear button - clears the search query */}
+              {searchQuery && (
+                <button
                   type="button"
-                  variant="ghost"
-                  size="icon"
-                  className={`absolute right-1 top-1 h-9 w-9 rounded-lg transition-colors ${showFilters ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-muted"}`}
-                  title="Advanced search filters"
-                />
-              }>
-                <SlidersHorizontal className="h-5 w-5" />
-              </DialogTrigger>
+                  className="text-muted-foreground hover:text-foreground transition-colors p-1"
+                  onClick={() => { setSearchQuery(""); setShowSuggestions(false); }}
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              )}
+
+              {/* dialog trigger button for advanced filters */}
+              <Dialog open={showFilters} onOpenChange={setShowFilters}>
+                <DialogTrigger render={
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="icon"
+                    className={`h-8 w-8 rounded-md transition-colors ${showFilters ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-muted"}`}
+                    title="Advanced search filters"
+                  />
+                }>
+                  <SlidersHorizontal className="h-4 w-4" />
+                </DialogTrigger>
 
               <DialogContent style={{ width: "900px", maxWidth: "95vw" }} className="w-full rounded-xl font-mono border border-border bg-card/95 backdrop-blur-md p-6">
                 <DialogHeader className="border-b pb-4">
@@ -260,6 +263,12 @@ export function Header() {
                 </div>
               </DialogContent>
             </Dialog>
+
+            {/* Search button inside */}
+            <Button type="submit" className="rounded-md bg-primary hover:bg-primary/90 h-8 px-3 text-primary-foreground text-xs font-semibold font-mono">
+              Search
+            </Button>
+          </div>
 
             {/* ── AUTOCOMPLETE DROPDOWN ── */}
             {/* backdrop to close suggestions when clicking outside */}
@@ -403,9 +412,6 @@ export function Header() {
             </div>
           )}
 
-          <Button type="submit" className="rounded-lg bg-primary hover:bg-primary/90 h-11 px-6 text-primary-foreground text-sm font-semibold font-mono shrink-0">
-            Search
-          </Button>
         </form>
 
         {/* right section */}

@@ -193,20 +193,24 @@ export default function Dashboard() {
           />
 
           {/* coded by antigravity credit section */}
-          <Card className="border shadow-none rounded-none border-primary/20 bg-primary/5 p-5 font-mono flex flex-col md:flex-row items-center justify-between gap-4">
+          <Card 
+            className="border shadow-none rounded-none bg-primary/5 p-5 flex flex-col md:flex-row items-center justify-between gap-4"
+            style={{ border: "1px solid var(--border)" }}
+          >
             <div className="flex items-center gap-3">
-              <div className="bg-[#22c55e] text-white p-2 shrink-0">
-                <Terminal className="h-5 w-5" />
+              <div className="bg-primary/10 text-primary p-2.5 rounded-xs shrink-0 flex items-center justify-center">
+                <Sparkles className="h-5 w-5 animate-pulse" />
               </div>
               <div>
-                <h4 className="text-sm font-black text-foreground">SYSTEM LOG: CREATION PROVENANCE</h4>
+                <h4 className="text-sm font-bold text-foreground">SYSTEM LOG: CREATOR INFO</h4>
                 <p className="text-xs text-muted-foreground">
-                  Designed & handcrafted with medical-grade precision by <span className="text-[#22c55e] font-extrabold">Antigravity</span> (Google DeepMind Team).
+                  Designed and created with medical-grade precision by <span className="text-primary font-bold">Antigravity</span> (Google DeepMind Team).
                 </p>
               </div>
             </div>
-            <div className="flex gap-2 text-xs text-[#22c55e] font-bold border border-[#22c55e]/30 px-4 py-1.5 bg-[#22c55e]/15">
-              <span>HUMAN-AI PAIR CODED</span>
+            <div className="clinical-badge flex items-center gap-1.5 text-xs px-3 py-1.5 shrink-0">
+              <Sparkles className="h-3.5 w-3.5" />
+              <span>HUMAN-AI CO-DEVELOPED</span>
             </div>
           </Card>
 
