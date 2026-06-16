@@ -1,26 +1,364 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: "Google Sans Flex", ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
+  --font-heading: "Google Sans Flex", ui-sans-serif, system-ui, sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ---- LIGHT THEME (MEDICAL GREEN PALETTE) ---- */
+:root {
+  --background: #f0fdf4;
+  --foreground: #14532d;
+  --card: #ffffff;
+  --card-foreground: #14532d;
+  --popover: #ffffff;
+  --popover-foreground: #14532d;
+  --primary: #22c55e;
+  --primary-foreground: #ffffff;
+  --secondary: #dcfce7;
+  --secondary-foreground: #16a34a;
+  --muted: #f0fdf4;
+  --muted-foreground: #15803d;
+  --accent: #dcfce7;
+  --accent-foreground: #14532d;
+  --destructive: #ef4444;
+  --border: #bbf7d0;
+  --input: #bbf7d0;
+  --ring: #22c55e;
+  --chart-1: #22c55e;
+  --chart-2: #16a34a;
+  --chart-3: #f59e0b;
+  --chart-4: #ef4444;
+  --chart-5: #8b5cf6;
+  --radius: 0px;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #14532d;
+  --sidebar-primary: #22c55e;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f0fdf4;
+  --sidebar-accent-foreground: #16a34a;
+  --sidebar-border: #bbf7d0;
+  --sidebar-ring: #22c55e;
+}
+
+/* ---- DARK THEME (MEDICAL CLINICAL EMERALD) ---- */
+.dark {
+  --background: #111318;
+  --foreground: #e2e8f0;
+  --card: #161920;
+  --card-foreground: #e2e8f0;
+  --popover: #161920;
+  --popover-foreground: #e2e8f0;
+  --primary: #10b981;
+  --primary-foreground: #111318;
+  --secondary: #20242e;
+  --secondary-foreground: #f8fafc;
+  --muted: #1c202b;
+  --muted-foreground: #94a3b8;
+  --accent: #20242e;
+  --accent-foreground: #f8fafc;
+  --destructive: #ef4444;
+  --border: #20242e;
+  --input: #20242e;
+  --ring: #10b981;
+  --chart-1: #10b981;
+  --chart-2: #059669;
+  --chart-3: #f59e0b;
+  --chart-4: #ef4444;
+  --chart-5: #8b5cf6;
+  --sidebar: #0e1014;
+  --sidebar-foreground: #e2e8f0;
+  --sidebar-primary: #10b981;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #161920;
+  --sidebar-accent-foreground: #10b981;
+  --sidebar-border: #1a1d26;
+  --sidebar-ring: #10b981;
+}
+
+/* Override hardcoded neon green utility classes in dark mode */
+.dark .bg-\[\#22c55e\] {
+  background-color: var(--primary) !important;
+}
+.dark .hover\:bg-\[\#22c55e\]\/90:hover,
+.dark .bg-\[\#22c55e\]\/90 {
+  background-color: #059669 !important;
+}
+.dark .bg-\[\#22c55e\]\/10 {
+  background-color: rgba(16, 185, 129, 0.12) !important;
+}
+.dark .bg-\[\#22c55e\]\/5 {
+  background-color: rgba(16, 185, 129, 0.06) !important;
+}
+.dark .bg-\[\#22c55e\]\/20 {
+  background-color: rgba(16, 185, 129, 0.22) !important;
+}
+
+.dark .text-\[\#22c55e\] {
+  color: var(--primary) !important;
+}
+
+.dark .border-\[\#22c55e\] {
+  border-color: var(--primary) !important;
+}
+.dark .border-\[\#22c55e\]\/20 {
+  border-color: rgba(16, 185, 129, 0.25) !important;
+}
+.dark .border-l-\[\#22c55e\] {
+  border-left-color: var(--primary) !important;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    font-family: "Google Sans Flex", ui-sans-serif, system-ui, sans-serif;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Google Sans Flex", ui-sans-serif, system-ui, sans-serif;
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* --- STRICTLY FORCE ONLY text-sm, text-base, text-lg, AND text-xl SITE-WIDE --- */
+
+  /* 1. All small text utilities force mapped to text-sm (0.875rem / 14px) */
+  .text-xs, .text-sm, .text-xs\/4, .text-sm\/6, .text-xs\/5, .text-\[10px\], .text-\[11px\], .text-\[9px\] {
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+  }
+
+  /* 2. Base text utilities force mapped to text-base (1rem / 16px) */
+  .text-base, .text-base\/6, body, input, select, textarea, button {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+  }
+
+  /* 3. Subheadings / Large text utilities force mapped to text-lg (1.125rem / 18px) */
+  .text-lg, .text-lg\/7 {
+    font-size: 1.125rem !important;
+    line-height: 1.75rem !important;
+  }
+
+  /* 4. Heading text utilities force mapped to text-xl (1.25rem / 20px) */
+  .text-xl, .text-2xl, .text-3xl, .text-4xl, .text-5xl, .text-6xl, h1, h2, h3, h4, h5, h6, .text-2xl\/8, .text-xl\/7 {
+    font-size: 1.25rem !important;
+    line-height: 1.875rem !important;
+    font-weight: 700 !important;
+  }
+
+  /* --- HOME DASHBOARD SCALED DOWN TYPOGRAPHY --- */
+  .home-dashboard-page .text-3xl,
+  .home-dashboard-page h1.text-3xl,
+  .home-dashboard-page .text-2xl,
+  .home-dashboard-page .text-xl,
+  .home-dashboard-page .text-lg,
+  .home-dashboard-page h1,
+  .home-dashboard-page h2,
+  .home-dashboard-page h3,
+  .home-dashboard-page h4,
+  .home-dashboard-page h5,
+  .home-dashboard-page h6 {
+    font-size: 1.25rem !important;
+    line-height: 1.6rem !important;
+  }
+
+  .home-dashboard-page .text-base,
+  .home-dashboard-page .text-sm,
+  .home-dashboard-page .text-xs,
+  .home-dashboard-page .text-\[10px\],
+  .home-dashboard-page .text-\[11px\],
+  .home-dashboard-page .text-\[9px\],
+  .home-dashboard-page p,
+  .home-dashboard-page span,
+  .home-dashboard-page button,
+  .home-dashboard-page td,
+  .home-dashboard-page th {
+    font-size: 12px !important;
+    line-height: 1.15rem !important;
   }
 }
 
-body {
+/* --- CUSTOM SOFT SCROLLBAR SITE-WIDE --- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.25);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.45);
+}
+
+/* Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(16, 185, 129, 0.25) transparent;
+}
+
+/* glassmorphism wave shimmer animation */
+@keyframes glass-shimmer {
+  0% {
+    transform: translateX(-150%) skewX(-15deg);
+  }
+  50% {
+    transform: translateX(150%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(150%) skewX(-15deg);
+  }
+}
+
+.glass-wave-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-wave-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(34, 197, 94, 0) 0%,
+    rgba(34, 197, 94, 0.12) 25%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(34, 197, 94, 0.12) 75%,
+    rgba(34, 197, 94, 0) 100%
+  );
+  transform: translateX(-150%) skewX(-15deg);
+  animation: glass-shimmer 3s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.dark .glass-wave-card::before {
+  background: linear-gradient(
+    90deg,
+    rgba(16, 185, 129, 0) 0%,
+    rgba(16, 185, 129, 0.15) 25%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(16, 185, 129, 0.15) 75%,
+    rgba(16, 185, 129, 0) 100%
+  );
+}
+
+/* --- HEALTHCARE BRANDED SOFT GLASS STYLING --- */
+
+/* Remove harsh borders from all divs/cards globally, replacing with soft shadows or backgrounds */
+[class*="border"] {
+  border-color: transparent !important;
+}
+
+/* Preserve left-accent tabs on metrics tiles or active states */
+.border-l, .border-l-2, .border-l-4, .border-l-8, [class*="border-l-"] {
+  border-left-color: var(--primary) !important;
+  border-left-style: solid !important;
+  border-left-width: 4px !important;
+}
+
+/* Glassmorphism for dark mode cards, panels and sidebars */
+.dark .bg-card,
+.dark .card,
+.dark .bg-muted,
+.dark dialog,
+.dark .dialog-content {
+  background-color: rgba(22, 25, 32, 0.65) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Ensure glass shimmer works with transparent border */
+.dark .glass-wave-card {
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+}
+
+/* Glass inputs and selectors in dark mode */
+.dark input, 
+.dark select, 
+.dark textarea {
+  background-color: rgba(22, 25, 32, 0.45) !important;
+  backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Force border-radius rounded-lg (8px) globally on all cards, inputs, buttons, wrappers, and override sharp classes */
+.rounded-none {
+  border-radius: 8px !important;
+}
+
+.card, 
+.border,
+.bg-card,
+.glass-wave-card,
+button, 
+input, 
+select, 
+textarea,
+dialog,
+.dialog-content,
+[class*="rounded"] {
+  border-radius: 8px !important;
 }

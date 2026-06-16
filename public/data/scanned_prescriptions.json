@@ -1,0 +1,163 @@
+{
+  "prescription (1).jpg": {
+    "doctorName": "Dr. Mohammad Anisur Rahman",
+    "date": "2024-11-15",
+    "patientCase": "Chest pain and shortness of breath for 3 days. History of hypertension.",
+    "respiratoryRate": "20 breaths/min",
+    "bloodPressure": "145/95 mmHg",
+    "medicines": [
+      {
+        "name": "Amlodipine",
+        "dosage": "5mg once daily",
+        "duration": "30 days",
+        "classification": "Other"
+      },
+      {
+        "name": "Atorvastatin",
+        "dosage": "20mg at night",
+        "duration": "90 days",
+        "classification": "Other"
+      }
+    ],
+    "testResults": [
+      {
+        "testName": "Total Cholesterol",
+        "value": "215 mg/dL"
+      },
+      {
+        "testName": "LDL",
+        "value": "138 mg/dL"
+      }
+    ]
+  },
+  "prescription (2).jpg": {
+    "doctorName": "Dr. Aminul Islam",
+    "date": "2024-06-20",
+    "patientCase": "Stomach ache after meals, bloating, acid reflux for 2 weeks.",
+    "respiratoryRate": null,
+    "bloodPressure": null,
+    "medicines": [
+      {
+        "name": "Omeprazole",
+        "dosage": "20mg before meals",
+        "duration": "14 days",
+        "classification": "Gastric"
+      },
+      {
+        "name": "Domperidone",
+        "dosage": "10mg three times daily",
+        "duration": "7 days",
+        "classification": "Gastric"
+      }
+    ],
+    "testResults": [
+      {
+        "testName": "H. Pylori Test",
+        "value": "Negative"
+      }
+    ]
+  },
+  "prescription (3).jpg": {
+    "doctorName": "Dr. Salma Begum",
+    "date": "2024-12-01",
+    "patientCase": "Irregular menstrual cycle, abdominal pain, fatigue. Suspected iron deficiency.",
+    "respiratoryRate": "16 breaths/min",
+    "bloodPressure": "110/70 mmHg",
+    "medicines": [
+      {
+        "name": "Ferrous Sulfate",
+        "dosage": "200mg twice daily",
+        "duration": "60 days",
+        "classification": "Vitamin"
+      },
+      {
+        "name": "Calcium Carbonate",
+        "dosage": "500mg twice daily",
+        "duration": "30 days",
+        "classification": "Calcium"
+      }
+    ],
+    "testResults": [
+      {
+        "testName": "Hemoglobin",
+        "value": "9.2 g/dL"
+      }
+    ]
+  },
+  "prescription (4).jpg": {
+    "doctorName": "Dr. Farhan Hossain",
+    "date": "2025-01-10",
+    "patientCase": "Severe headache and blurred vision for 5 days. Tension headache suspected.",
+    "respiratoryRate": null,
+    "bloodPressure": "120/80 mmHg",
+    "medicines": [
+      {
+        "name": "Naproxen",
+        "dosage": "250mg twice daily",
+        "duration": "5 days",
+        "classification": "Painkiller"
+      },
+      {
+        "name": "Vitamin B Complex",
+        "dosage": "1 tablet daily",
+        "duration": "30 days",
+        "classification": "Vitamin"
+      }
+    ],
+    "testResults": []
+  },
+  "prescription (5).jpg": {
+    "doctorName": "Dr. Jannatul Ferdous",
+    "date": "2024-08-03",
+    "patientCase": "Post-chemotherapy follow-up. Persistent nausea and fatigue.",
+    "respiratoryRate": null,
+    "bloodPressure": null,
+    "medicines": [
+      {
+        "name": "Ondansetron",
+        "dosage": "8mg twice daily",
+        "duration": "14 days",
+        "classification": "Gastric"
+      },
+      {
+        "name": "Multivitamin",
+        "dosage": "1 tablet daily",
+        "duration": "90 days",
+        "classification": "Vitamin"
+      }
+    ],
+    "testResults": [
+      {
+        "testName": "CA-125 Tumor Marker",
+        "value": "28 U/mL"
+      }
+    ]
+  },
+  "prescription (6).jpg": {
+    "doctorName": "Dr. Rezaul Karim",
+    "date": "2024-09-12",
+    "patientCase": "Right knee swelling and pain after sports injury. Mild osteoarthritis.",
+    "respiratoryRate": "15 breaths/min",
+    "bloodPressure": "125/82 mmHg",
+    "medicines": [
+      {
+        "name": "Diclofenac",
+        "dosage": "50mg twice daily",
+        "duration": "10 days",
+        "classification": "Painkiller"
+      },
+      {
+        "name": "Calcium + Vitamin D3",
+        "dosage": "1 tablet daily",
+        "duration": "60 days",
+        "classification": "Calcium"
+      }
+    ],
+    "testResults": [
+      {
+        "testName": "X-Ray Right Knee",
+        "value": "Mild joint space narrowing"
+      }
+    ]
+  }
+}

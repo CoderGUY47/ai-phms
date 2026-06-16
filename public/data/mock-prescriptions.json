@@ -1,0 +1,47 @@
+{
+  "staticScenarios": {
+    "1": {
+      "doctorName": "Dr. Mohammad Anisur Rahman",
+      "date": "2024-11-15",
+      "patientCase": "Chest pain and shortness of breath for 3 days. History of hypertension.",
+      "respiratoryRate": "20 breaths/min",
+      "bloodPressure": "145/95 mmHg",
+      "medicines": [
+        { "name": "Amlodipine", "dosage": "5mg once daily", "duration": "30 days", "classification": "Other" },
+        { "name": "Atorvastatin", "dosage": "20mg at night", "duration": "90 days", "classification": "Other" }
+      ],
+      "testResults": [
+        { "testName": "Total Cholesterol", "value": "215 mg/dL" },
+        { "testName": "LDL", "value": "138 mg/dL" }
+      ]
+    },
+    "2": {
+      "doctorName": "Dr. Aminul Islam",
+      "date": "2024-06-20",
+      "patientCase": "Stomach ache after meals, bloating, acid reflux for 2 weeks.",
+      "respiratoryRate": "16 breaths/min",
+      "bloodPressure": "120/80 mmHg",
+      "medicines": [
+        { "name": "Omeprazole", "dosage": "20mg before meals", "duration": "14 days", "classification": "Gastric" },
+        { "name": "Domperidone", "dosage": "10mg three times daily", "duration": "7 days", "classification": "Gastric" }
+      ],
+      "testResults": [
+        { "testName": "H. Pylori Test", "value": "Negative" }
+      ]
+    },
+    "3": {
+      "doctorName": "Dr. Salma Begum",
+      "date": "2024-12-01",
+      "patientCase": "Irregular cycle, abdominal pain, fatigue. Suspected iron deficiency.",
+      "respiratoryRate": "16 breaths/min",
+      "bloodPressure": "110/70 mmHg",
+      "medicines": [
+        { "name": "Ferrous Sulfate", "dosage": "200mg twice daily", "duration": "60 days", "classification": "Vitamin" },
+        { "name": "Calcium Carbonate", "dosage": "500mg twice daily", "duration": "30 days", "classification": "Calcium" }
+      ],
+      "testResults": [
+        { "testName": "Hemoglobin", "value": "9.2 g/dL" }
+      ]
+    }
+  }
+}

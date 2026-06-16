@@ -1,0 +1,438 @@
+[{
+    "id": "PT-1001",
+    "name": "Rakibul Hasan",
+    "age": 42,
+    "gender": "Male",
+    "phone": "+880 1711-111001",
+    "status": "Active",
+    "history": [{
+        "recordId": "REC-10011",
+        "patientId": "PT-1001",
+        "date": "2024-11-15",
+        "doctorName": "Dr. Mohammad Anisur Rahman",
+        "patientCase": "Chest pain and shortness of breath for 3 days. History of hypertension.",
+        "respiratoryRate": "20 breaths/min",
+        "bloodPressure": "145/95 mmHg",
+        "medicines": [{
+            "name": "Amlodipine",
+            "dosage": "5mg once daily",
+            "duration": "30 days",
+            "classification": "Other"
+          },
+          {
+            "name": "Atorvastatin",
+            "dosage": "20mg at night",
+            "duration": "90 days",
+            "classification": "Other"
+          }
+        ],
+        "testResults": [{
+          "testName": "Total Cholesterol",
+          "value": "215 mg/dL"
+        }, {
+          "testName": "LDL",
+          "value": "138 mg/dL"
+        }]
+      },
+      {
+        "recordId": "REC-10012",
+        "patientId": "PT-1001",
+        "date": "2024-06-20",
+        "doctorName": "Dr. Aminul Islam",
+        "patientCase": "Stomach ache after meals, bloating, acid reflux for 2 weeks.",
+        "medicines": [{
+            "name": "Omeprazole",
+            "dosage": "20mg before meals",
+            "duration": "14 days",
+            "classification": "Gastric"
+          },
+          {
+            "name": "Domperidone",
+            "dosage": "10mg three times daily",
+            "duration": "7 days",
+            "classification": "Gastric"
+          }
+        ],
+        "testResults": [{
+          "testName": "H. Pylori Test",
+          "value": "Negative"
+        }, {
+          "testName": "Fasting Glucose",
+          "value": "98 mg/dL"
+        }]
+      }
+    ]
+  },
+  {
+    "id": "PT-1002",
+    "name": "Fatema Khanam",
+    "age": 35,
+    "gender": "Female",
+    "phone": "+880 1711-111002",
+    "status": "Active",
+    "history": [{
+      "recordId": "REC-10021",
+      "patientId": "PT-1002",
+      "date": "2024-12-01",
+      "doctorName": "Dr. Salma Begum",
+      "patientCase": "Irregular menstrual cycle, lower abdominal pain, fatigue. Suspected iron deficiency.",
+      "respiratoryRate": "16 breaths/min",
+      "bloodPressure": "110/70 mmHg",
+      "medicines": [{
+          "name": "Ferrous Sulfate",
+          "dosage": "200mg twice daily",
+          "duration": "60 days",
+          "classification": "Vitamin"
+        },
+        {
+          "name": "Folic Acid",
+          "dosage": "5mg once daily",
+          "duration": "60 days",
+          "classification": "Vitamin"
+        },
+        {
+          "name": "Calcium Carbonate",
+          "dosage": "500mg twice daily",
+          "duration": "30 days",
+          "classification": "Calcium"
+        }
+      ],
+      "testResults": [{
+        "testName": "Hemoglobin",
+        "value": "9.2 g/dL"
+      }, {
+        "testName": "Serum Ferritin",
+        "value": "8 ng/mL"
+      }]
+    }]
+  },
+  {
+    "id": "PT-1003",
+    "name": "Sabbir Ahmed",
+    "age": 28,
+    "gender": "Male",
+    "phone": "+880 1711-111003",
+    "status": "Active",
+    "history": [{
+      "recordId": "REC-10031",
+      "patientId": "PT-1003",
+      "date": "2025-01-10",
+      "doctorName": "Dr. Farhan Hossain",
+      "patientCase": "Severe headache, dizziness, and blurred vision for 5 days. No prior neurological history.",
+      "respiratoryRate": "18 breaths/min",
+      "bloodPressure": "120/80 mmHg",
+      "medicines": [{
+          "name": "Naproxen",
+          "dosage": "250mg twice daily",
+          "duration": "5 days",
+          "classification": "Painkiller"
+        },
+        {
+          "name": "Vitamin B Complex",
+          "dosage": "1 tablet daily",
+          "duration": "30 days",
+          "classification": "Vitamin"
+        }
+      ],
+      "testResults": [{
+        "testName": "MRI Brain",
+        "value": "No abnormality detected"
+      }, {
+        "testName": "Blood Pressure",
+        "value": "120/80 mmHg"
+      }]
+    }]
+  },
+  {
+    "id": "PT-1004",
+    "name": "Rokeya Begum",
+    "age": 55,
+    "gender": "Female",
+    "phone": "+880 1711-111004",
+    "status": "Active",
+    "history": [{
+      "recordId": "REC-10041",
+      "patientId": "PT-1004",
+      "date": "2024-10-05",
+      "doctorName": "Dr. Abdur Rahim",
+      "patientCase": "Type 2 diabetes management. Elevated blood glucose. Polyuria and polydipsia.",
+      "respiratoryRate": "17 breaths/min",
+      "bloodPressure": "130/85 mmHg",
+      "medicines": [{
+          "name": "Metformin",
+          "dosage": "500mg twice daily",
+          "duration": "90 days",
+          "classification": "Other"
+        },
+        {
+          "name": "Glibenclamide",
+          "dosage": "5mg once daily",
+          "duration": "90 days",
+          "classification": "Other"
+        },
+        {
+          "name": "Calcium Supplement",
+          "dosage": "500mg once daily",
+          "duration": "60 days",
+          "classification": "Calcium"
+        }
+      ],
+      "testResults": [{
+        "testName": "HbA1c",
+        "value": "8.4%"
+      }, {
+        "testName": "Fasting Blood Glucose",
+        "value": "182 mg/dL"
+      }, {
+        "testName": "Creatinine",
+        "value": "1.1 mg/dL"
+      }]
+    }]
+  },
+  {
+    "id": "PT-1005",
+    "name": "Imran Khan",
+    "age": 32,
+    "gender": "Male",
+    "phone": "+880 1711-111005",
+    "status": "Active",
+    "history": [{
+      "recordId": "REC-10051",
+      "patientId": "PT-1005",
+      "date": "2025-02-14",
+      "doctorName": "Dr. Rozina Khatun",
+      "patientCase": "Persistent dry cough for 3 weeks, mild fever, suspected upper respiratory tract infection.",
+      "respiratoryRate": "22 breaths/min",
+      "bloodPressure": "118/76 mmHg",
+      "medicines": [{
+          "name": "Azithromycin",
+          "dosage": "500mg once daily",
+          "duration": "5 days",
+          "classification": "Antibiotic"
+        },
+        {
+          "name": "Paracetamol",
+          "dosage": "500mg as needed",
+          "duration": "5 days",
+          "classification": "Painkiller"
+        },
+        {
+          "name": "Vitamin C",
+          "dosage": "1000mg once daily",
+          "duration": "14 days",
+          "classification": "Vitamin"
+        }
+      ],
+      "testResults": [{
+        "testName": "CBC",
+        "value": "WBC: 11,200 cells/μL"
+      }, {
+        "testName": "CRP",
+        "value": "12 mg/L"
+      }]
+    }]
+  },
+  {
+    "id": "PT-1006",
+    "name": "Sumaiya Islam",
+    "age": 24,
+    "gender": "Female",
+    "phone": "+880 1711-111006",
+    "status": "Active",
+    "history": [{
+      "recordId": "REC-10061",
+      "patientId": "PT-1006",
+      "date": "2025-01-28",
+      "doctorName": "Dr. Shahana Akter",
+      "patientCase": "Skin rash, itching and redness on arms and face. Possible allergic reaction.",
+      "medicines": [{
+          "name": "Cetirizine",
+          "dosage": "10mg once daily",
+          "duration": "7 days",
+          "classification": "Other"
+        },
+        {
+          "name": "Hydrocortisone Cream",
+          "dosage": "Apply twice daily",
+          "duration": "7 days",
+          "classification": "Other"
+        },
+        {
+          "name": "Vitamin E Capsule",
+          "dosage": "400IU once daily",
+          "duration": "30 days",
+          "classification": "Vitamin"
+        }
+      ],
+      "testResults": [{
+        "testName": "Allergy Panel",
+        "value": "Dust mite sensitivity"
+      }]
+    }]
+  },
+  {
+    "id": "PT-1007",
+    "name": "Tanvir Ahmed",
+    "age": 48,
+    "gender": "Male",
+    "phone": "+880 1711-111007",
+    "status": "Active",
+    "history": [{
+      "recordId": "REC-10071",
+      "patientId": "PT-1007",
+      "date": "2024-09-12",
+      "doctorName": "Dr. Rezaul Karim",
+      "patientCase": "Right knee pain after sports injury. Swelling and limited range of motion.",
+      "respiratoryRate": "15 breaths/min",
+      "bloodPressure": "125/82 mmHg",
+      "medicines": [{
+          "name": "Diclofenac",
+          "dosage": "50mg twice daily",
+          "duration": "10 days",
+          "classification": "Painkiller"
+        },
+        {
+          "name": "Calcium + Vitamin D3",
+          "dosage": "1 tablet daily",
+          "duration": "60 days",
+          "classification": "Calcium"
+        },
+        {
+          "name": "Amoxicillin",
+          "dosage": "500mg three times daily",
+          "duration": "7 days",
+          "classification": "Antibiotic"
+        }
+      ],
+      "testResults": [{
+        "testName": "X-Ray Right Knee",
+        "value": "Mild joint space narrowing"
+      }, {
+        "testName": "Uric Acid",
+        "value": "7.2 mg/dL"
+      }]
+    }]
+  },
+  {
+    "id": "PT-1008",
+    "name": "Nasima Akter",
+    "age": 60,
+    "gender": "Female",
+    "phone": "+880 1711-111008",
+    "status": "Suspended",
+    "history": [{
+      "recordId": "REC-10081",
+      "patientId": "PT-1008",
+      "date": "2024-08-03",
+      "doctorName": "Dr. Jannatul Ferdous",
+      "patientCase": "Post-chemotherapy follow-up. Fatigue, nausea, hair loss. Breast cancer stage 2 remission.",
+      "medicines": [{
+          "name": "Ondansetron",
+          "dosage": "8mg twice daily",
+          "duration": "14 days",
+          "classification": "Gastric"
+        },
+        {
+          "name": "Calcium Carbonate",
+          "dosage": "1000mg daily",
+          "duration": "90 days",
+          "classification": "Calcium"
+        },
+        {
+          "name": "Multivitamin",
+          "dosage": "1 tablet daily",
+          "duration": "90 days",
+          "classification": "Vitamin"
+        }
+      ],
+      "testResults": [{
+        "testName": "CA-125 Tumor Marker",
+        "value": "28 U/mL"
+      }, {
+        "testName": "Hemoglobin",
+        "value": "10.8 g/dL"
+      }]
+    }]
+  },
+  {
+    "id": "PT-1009",
+    "name": "Mehedi Hasan",
+    "age": 19,
+    "gender": "Male",
+    "phone": "+880 1711-111009",
+    "status": "Active",
+    "history": [{
+      "recordId": "REC-10091",
+      "patientId": "PT-1009",
+      "date": "2025-03-07",
+      "doctorName": "Dr. Nasrin Sultana",
+      "patientCase": "Severe acne vulgaris on face and back. Scarring beginning. Oily skin type.",
+      "medicines": [{
+          "name": "Doxycycline",
+          "dosage": "100mg once daily",
+          "duration": "30 days",
+          "classification": "Antibiotic"
+        },
+        {
+          "name": "Tretinoin Gel 0.025%",
+          "dosage": "Apply at night",
+          "duration": "90 days",
+          "classification": "Other"
+        },
+        {
+          "name": "Zinc Supplement",
+          "dosage": "20mg daily",
+          "duration": "60 days",
+          "classification": "Vitamin"
+        }
+      ],
+      "testResults": [{
+        "testName": "Hormonal Panel",
+        "value": "Testosterone: 520 ng/dL (normal)"
+      }]
+    }]
+  },
+  {
+    "id": "PT-1010",
+    "name": "Dilruba Yesmin",
+    "age": 38,
+    "gender": "Female",
+    "phone": "+880 1711-111010",
+    "status": "Active",
+    "history": [{
+      "recordId": "REC-10101",
+      "patientId": "PT-1010",
+      "date": "2025-02-20",
+      "doctorName": "Dr. Aminul Islam",
+      "patientCase": "Diagnosed with IBS. Cramping, diarrhea alternating with constipation. Stress-related exacerbation.",
+      "respiratoryRate": "16 breaths/min",
+      "bloodPressure": "115/75 mmHg",
+      "medicines": [{
+          "name": "Mebeverine",
+          "dosage": "135mg three times daily",
+          "duration": "30 days",
+          "classification": "Gastric"
+        },
+        {
+          "name": "Omeprazole",
+          "dosage": "20mg once daily",
+          "duration": "14 days",
+          "classification": "Gastric"
+        },
+        {
+          "name": "Probiotic (Lactobacillus)",
+          "dosage": "1 capsule daily",
+          "duration": "30 days",
+          "classification": "Other"
+        }
+      ],
+      "testResults": [{
+        "testName": "Colonoscopy",
+        "value": "No polyps, mild inflammation"
+      }, {
+        "testName": "Stool Culture",
+        "value": "No pathogen detected"
+      }]
+    }]
+  }
+]
