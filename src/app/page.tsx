@@ -670,6 +670,7 @@ export default function Dashboard() {
                   value={searchScanQuery}
                   onChange={(e) => setSearchScanQuery(e.target.value)}
                   className="w-full text-xs font-mono border border-border px-3 py-1.5 bg-background text-foreground rounded-none outline-none focus:border-[#22c55e]"
+                  suppressHydrationWarning
                 />
               </div>
             </CardHeader>
