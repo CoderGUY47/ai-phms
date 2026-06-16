@@ -438,4 +438,63 @@ span[class*="badge"] {
   .flex-row-reverse {
     flex-direction: column !important;
   }
+
+  /* Scale down base font sizes globally on mobile */
+  html, body {
+    font-size: 13px !important;
+  }
+
+  /* Make headings and large text elements smaller on mobile */
+  h1, .text-3xl {
+    font-size: 1.5rem !important;
+  }
+  h2, .text-2xl {
+    font-size: 1.25rem !important;
+  }
+  h3, .text-xl {
+    font-size: 1.05rem !important;
+  }
+  h4, .text-lg, .text-base {
+    font-size: 0.9rem !important;
+  }
+  
+  /* Specifically scale down Card Titles and section headers */
+  .card-title,
+  [class*="CardTitle"],
+  [class*="text-sm"].font-bold.uppercase.tracking-wider {
+    font-size: 0.75rem !important;
+    letter-spacing: 0.05em !important;
+  }
+  
+  /* Scale down custom toggle tabs and Radix TabsTrigger buttons */
+  .flex.border.text-xs.font-bold.font-mono button,
+  [class*="TabsTrigger"] {
+    font-size: 0.7rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  /* Scale down badges globally on mobile */
+  .group\/badge,
+  [data-slot="badge"],
+  [class*="badge"],
+  span[class*="badge"] {
+    font-size: 8px !important;
+    padding-left: 0.35rem !important;
+    padding-right: 0.35rem !important;
+    height: 16px !important;
+  }
+  
+  /* Scale down standard padding of cards and containers on mobile */
+  .p-4, .p-6, .p-8, 
+  [class*="p-4"], [class*="p-6"], [class*="p-8"], 
+  [class*="px-4"], [class*="px-6"], [class*="px-8"] {
+    padding: 0.65rem !important;
+  }
+  .pt-4, .pt-6, .pb-4, .pb-6, .py-4, .py-6 {
+    padding-top: 0.45rem !important;
+    padding-bottom: 0.45rem !important;
+  }
 }
