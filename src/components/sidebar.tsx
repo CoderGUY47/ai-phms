@@ -65,7 +65,7 @@ export function Sidebar() {
       {/* mobile top navigation bar shown only on smaller screens */}
       <header className="md:hidden flex h-14 w-full items-center justify-between border-b bg-card px-4 sticky top-0 z-50">
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex items-center justify-center shrink-0 rounded-full border border-[#22c55e]/20 bg-black h-8 w-8">
+          <div className="flex items-center justify-center shrink-0 rounded-full border border-primary/20 bg-primary/10 h-8 w-8">
             <Image
               src="/assets/logo.png"
               width={24}
@@ -101,7 +101,7 @@ export function Sidebar() {
       >
         {/* application branding logo and title banner */}
         <div className="flex h-20 items-center px-5 border-b gap-3 shrink-0">
-          <div className="flex items-center justify-center shrink-0 rounded-full border border-[#22c55e]/20 bg-black h-10 w-10">
+          <div className="flex items-center justify-center shrink-0 rounded-full border border-primary/20 bg-primary/10 h-10 w-10">
             <Image
               src="/assets/logo.png"
               width={32}
