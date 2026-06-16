@@ -28,37 +28,6 @@ export function Sidebar() {
   // state to track if the mobile navigation drawer is open
   const [isOpen, setIsOpen] = useState(false);
 
-  // state to track which submenus are expanded or collapsed
-  const [openMenus, setOpenMenus] = useState<Record<string, boolean>>({
-    dashboard: true,
-    patients: false,
-    doctors: false,
-    features: false,
-    forms: false,
-    apps: false,
-    auth: false,
-    misc: false,
-    subCard: false,
-    subUi: false,
-    subIcons: false,
-    subCustom: false,
-    subComp: false,
-    subForms: false,
-    subTables: false,
-    subCharts: false,
-    subApps: false,
-    subWidgets: false,
-    subWidgetCustom: false,
-    subWidgetMaps: false,
-    subWidgetModals: false,
-    subEcom: false,
-    subSamples: false,
-  });
-
-  // toggles the visibility of sub-navigation menus
-  const toggleMenu = (key: string) => {
-    setOpenMenus((prev) => ({ ...prev, [key]: !prev[key] }));
-  };
 
   return (
     <>
