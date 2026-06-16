@@ -2,12 +2,19 @@
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
+interface StatItem {
+  label: string;
+  value: string;
+  icon: string;
+  colorClass: string;
+}
+
 export default function QuickStatsPanel() {
-  const stats = [
-    { label: "Total Patients", value: "124", icon: "🧑‍🤝‍🧑", color: "#3b82f6" },
-    { label: "Doctors On Duty", value: "12", icon: "🩺", color: "#22c55e" },
-    { label: "Appointments", value: "38", icon: "📅", color: "#a855f7" },
-    { label: "Scans Done", value: "5", icon: "📋", color: "#f59e0b" },
+  const stats: StatItem[] = [
+    { label: "Total Patients", value: "124", icon: "🧑‍🤝‍🧑", colorClass: "text-blue-500" },
+    { label: "Doctors On Duty", value: "12", icon: "🩺", colorClass: "text-primary" },
+    { label: "Appointments", value: "38", icon: "📅", colorClass: "text-purple-500" },
+    { label: "Scans Done", value: "5", icon: "📋", colorClass: "text-amber-500" },
   ];
 
   return (
@@ -28,7 +35,7 @@ export default function QuickStatsPanel() {
               {stat.icon}
             </div>
             <div className="flex flex-col min-w-0">
-              <div className="font-bold leading-tight" style={{ color: stat.color, fontSize: "14px" }}>
+              <div className={`font-bold leading-tight ${stat.colorClass}`} style={{ fontSize: "14px" }}>
                 {stat.value}
               </div>
               <div className="text-muted-foreground font-semibold uppercase tracking-wider mt-0.5 leading-tight" style={{ fontSize: "10px" }}>
