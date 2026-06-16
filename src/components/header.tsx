@@ -122,8 +122,7 @@ export function Header() {
             <Input
               type="search"
               placeholder="Search patients, doctors, medical logs..."
-              className="pl-11 pr-[130px] h-12 w-full bg-muted/40 text-base rounded-lg font-mono focus-visible:ring-1 focus-visible:ring-primary"
-              style={{ border: "1px solid color-mix(in srgb, var(--primary) 60%, transparent)" }}
+              className="pl-11 pr-[130px] h-12 w-full bg-muted/40 text-base rounded-lg focus-visible:ring-1 focus-visible:ring-primary navbar-search-input"
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value);
@@ -133,7 +132,16 @@ export function Header() {
               onFocus={() => {
                 if (searchQuery.trim().length > 0) setShowSuggestions(true);
               }}
+              onKeyDown={(e) => {
+                if (e.key === "Escape") {
+                  setShowSuggestions(false);
+                  setActiveIndex(-1);
+                }
+              }}
               autoComplete="off"
+              aria-label="Search patients, doctors, medical logs"
+              aria-autocomplete="list"
+              aria-expanded={showSuggestions}
             />
 
             {/* absolute controls inside the input box on the right */}
