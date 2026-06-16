@@ -309,6 +309,12 @@
   border-color: transparent !important;
 }
 
+/* Force navbar search input to have a visible 60% opacity primary green border */
+.navbar-search-input,
+input.navbar-search-input {
+  border: 1px solid color-mix(in srgb, var(--primary) 60%, transparent) !important;
+}
+
 /* Preserve left-accent tabs on metrics tiles or active states */
 .border-l, .border-l-2, .border-l-4, .border-l-8, [class*="border-l-"] {
   border-left-color: var(--primary) !important;
@@ -342,6 +348,12 @@
   background-color: rgba(22, 25, 32, 0.45) !important;
   backdrop-filter: blur(8px) !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Restore green border for navbar search in dark mode — must come AFTER .dark input rule to win cascade */
+.dark .navbar-search-input,
+.dark input.navbar-search-input {
+  border: 1px solid color-mix(in srgb, var(--primary) 60%, transparent) !important;
 }
 
 /* Force border-radius rounded-xs (2px) globally on all cards, inputs, buttons, wrappers, and override sharp classes */
