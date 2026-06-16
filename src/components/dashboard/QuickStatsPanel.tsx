@@ -11,7 +11,7 @@ export default function QuickStatsPanel() {
   ];
 
   return (
-    <Card className="border shadow-none rounded-none bg-card/60 backdrop-blur-md font-mono">
+    <Card className="border shadow-none rounded-none bg-card/60 backdrop-blur-md">
       <CardHeader className="pb-2 border-b">
         <CardTitle className="text-xs font-bold uppercase tracking-wider text-[#22c55e]">
           Today&apos;s Quick Stats
@@ -23,14 +23,14 @@ export default function QuickStatsPanel() {
             key={stat.label}
             className="p-3 border border-border/60 bg-[#1f2937] text-white flex items-center gap-3 rounded-none"
           >
-            <div className="h-10 w-10 shrink-0 flex items-center justify-center bg-black/30 text-lg rounded-none">
+            <div className="h-10 w-10 shrink-0 flex items-center justify-center text-lg rounded-none">
               {stat.icon}
             </div>
             <div className="flex flex-col min-w-0">
-              <span className="text-base font-black leading-tight" style={{ color: stat.color }}>
+              <span className="text-xs sm:text-sm font-medium leading-tight" style={{ color: stat.color }}>
                 {stat.value}
               </span>
-              <span className="text-[9px] text-gray-300 font-bold uppercase tracking-wider mt-0.5 leading-tight">
+              <span className="text-[8px] sm:text-[9px] text-gray-300 font-normal uppercase tracking-wider mt-0.5 leading-tight">
                 {stat.label}
               </span>
             </div>
