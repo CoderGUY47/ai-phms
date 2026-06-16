@@ -123,7 +123,7 @@ export function Header() {
               type="search"
               placeholder="Search patients, doctors, medical logs..."
               className="pl-11 pr-[130px] h-12 w-full bg-muted/40 text-base rounded-lg font-mono focus-visible:ring-1 focus-visible:ring-primary"
-              style={{ border: "1px solid var(--border)" }}
+              style={{ border: "1px solid color-mix(in srgb, var(--primary) 60%, transparent)" }}
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value);

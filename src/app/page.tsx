@@ -194,12 +194,26 @@ export default function Dashboard() {
 
           {/* coded by antigravity credit section */}
           <Card 
-            className="border shadow-none rounded-none bg-primary/5 p-5 flex flex-col md:flex-row items-center justify-between gap-4"
+            className="border shadow-none rounded-none bg-gradient-to-r from-primary/5 via-card to-primary/5 p-5 flex flex-col md:flex-row items-center justify-between gap-4 transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_0_15px_rgba(34,197,94,0.12)] cursor-pointer relative"
             style={{ border: "1px solid var(--border)" }}
           >
+            {/* SVG Gradient Definition */}
+            <svg width="0" height="0" className="absolute pointer-events-none">
+              <defs>
+                <linearGradient id="antigravity-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#22c55e" />
+                  <stop offset="50%" stopColor="#06b6d4" />
+                  <stop offset="100%" stopColor="#3b82f6" />
+                </linearGradient>
+              </defs>
+            </svg>
+
             <div className="flex items-center gap-3">
-              <div className="bg-primary/10 text-primary p-2.5 rounded-xs shrink-0 flex items-center justify-center">
-                <Sparkles className="h-5 w-5 animate-pulse" />
+              <div className="bg-primary/10 p-2.5 rounded-xs shrink-0 flex items-center justify-center border border-primary/20 shadow-[0_0_8px_rgba(34,197,94,0.1)]">
+                <Sparkles 
+                  className="h-5 w-5 animate-pulse" 
+                  style={{ stroke: "url(#antigravity-grad)", fill: "url(#antigravity-grad)", fillOpacity: 0.2 }} 
+                />
               </div>
               <div>
                 <h4 className="text-sm font-bold text-foreground">SYSTEM LOG: CREATOR INFO</h4>
@@ -208,7 +222,7 @@ export default function Dashboard() {
                 </p>
               </div>
             </div>
-            <div className="clinical-badge flex items-center gap-1.5 text-xs px-3 py-1.5 shrink-0">
+            <div className="clinical-badge flex items-center gap-1.5 text-xs px-3 py-1.5 shrink-0 transition-transform duration-300 hover:scale-105">
               <Sparkles className="h-3.5 w-3.5" />
               <span>HUMAN-AI CO-DEVELOPED</span>
             </div>
