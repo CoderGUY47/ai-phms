@@ -1,40 +1,30 @@
-<div align="center">
+# AI-Powered Prescription and Health Analytics Management System (AI-PHMS)
 
-# 🩺 AI-Powered Prescription & Health Analytics Management System (AI-PHMS)
-
-### Instant AI Prescription Extraction & Lifetime Clinical Analytics Command Center
+## Instant AI Prescription Extraction and Lifetime Clinical Analytics Command Center
 
 *Bridging automated prescription parsing with real-time health timeline tracking, vitals analytics, and antibiotic tracking.*
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-ai--phms.vercel.app-22c55e?style=for-the-badge)](https://ai-phms.vercel.app)
-&nbsp;
-[![Next.js 16](https://img.shields.io/badge/Next.js-16.2-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
-&nbsp;
-[![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
-&nbsp;
-[![TailwindCSS](https://img.shields.io/badge/Tailwind-v4-06b6d4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-
-</div>
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-ai--phms.vercel.app-22c55e?style=for-the-badge)](https://ai-phms.vercel.app) [![Next.js 16](https://img.shields.io/badge/Next.js-16.2-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/) [![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/) [![TailwindCSS](https://img.shields.io/badge/Tailwind-v4-06b6d4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
 ---
 
-## 📖 Table of Contents
+## Table of Contents
 
-- [✨ Overview](#-overview)
-- [🚀 Live Links & UI Preview](#-live-links--ui-preview)
-- [❌ The Problem & ✅ The Solution](#-the-problem---the-solution)
-- [💡 Business Value & SEO](#-business-value--seo)
-- [🚀 Key Features](#-key-features)
-- [📋 Project Tasks & Phases](#-project-tasks--phases)
-- [📦 Tech Stack & Architecture](#-tech-stack--architecture)
-- [📁 Project Structure](#-project-structure)
-- [🛠️ Installation & Setup](#-installation--setup)
-- [🚢 Production Deployment](#-production-deployment)
-- [🤝 Social & Contributing](#-social--contributing)
+- [Overview](#overview)
+- [The Problem and The Solution](#the-problem-and-the-solution)
+- [Live Links and UI Preview](#live-links-and-ui-preview)
+- [Business Value and SEO](#business-value-and-seo)
+- [Key Features](#key-features)
+- [Project Tasks and Phases](#project-tasks-and-phases)
+- [Tech Stack and Architecture](#tech-stack-and-architecture)
+- [Project Structure](#project-structure)
+- [Installation and Setup](#installation-and-setup)
+- [Production Deployment](#production-deployment)
+- [Social and Contributing](#social-and-contributing)
 
 ---
 
-## ✨ Overview
+## Overview
 
 **AI-PHMS** is an advanced frontend prototype designed to streamline patient document organization and empower doctors with real-time, comprehensive health history analytics before consultations. Meticulously engineered using **Next.js 16 (App Router)**, **React 19**, **Tailwind CSS 4**, and **Shadcn UI**, the platform operates as a secure client-side ledger utilizing browser `localStorage` as its database.
 
@@ -42,13 +32,13 @@ By dragging-and-dropping prescriptions or test report images/PDFs, patients trig
 
 ---
 
-## ❌ The Problem & ✅ The Solution
+## The Problem and The Solution
 
 > **Health records should be instant, legible, and structurally organized.**
 
 Patient-provided histories are often fragmented, consisting of scattered physical prescriptions, illegible handwriting, or unorganized PDF scans. In a busy clinic, doctors lack the time to trace patient records, resulting in unsafe prescription duplication, overlooked medication conflicts, or missed changes in diagnostic test results.
 
-| ❌ The Problem | ✅ AI-PHMS's Solution |
+| The Problem | AI-PHMS's Solution |
 | :--- | :--- |
 | Disjointed medical records in physical sheets or unsorted PDFs | Drag-and-drop document hub matching files with patient timelines |
 | Hand-written prescriptions are difficult to read and classify | Server-side AI API extracts, structures, and classifies medication lists |
@@ -58,45 +48,26 @@ Patient-provided histories are often fragmented, consisting of scattered physica
 
 ---
 
-## 🚀 Live Links & UI Preview
+## Live Links and UI Preview
 
-* **GitHub Repository:** [https://github.com/CoderGUY47/ai-phms](https://github.com/CoderGUY47/ai-phms)
-* **Live Deployment Website:** [https://ai-phms.vercel.app/](https://ai-phms.vercel.app/)
+- **GitHub Repository:** [https://github.com/CoderGUY47/ai-phms](https://github.com/CoderGUY47/ai-phms)
+- **Live Deployment Website:** [https://ai-phms.vercel.app/](https://ai-phms.vercel.app/)
 
-<br/>
+### Desktop Command Center
 
-<div align="center">
-
-### 🖥️ Desktop Command Center
 ![AI-PHMS Desktop Command Center](./AI-PHMS%20_%20Prescription%20&%20Health%20Analytics.png)
 
-<br/>
+### Mobile Responsive Views
 
-### 📱 Mobile Responsive Views
-<table width="100%">
-  <tr>
-    <td valign="top" width="33.33%" align="center">
-      <p align="center"><strong>Patient Portal</strong></p>
-      <img src="./mobile.png" alt="Patient Portal Mobile" />
-    </td>
-    <td valign="top" width="33.33%" align="center">
-      <p align="center"><strong>Doctor Portal</strong></p>
-      <img src="./mobile1.png" alt="Doctor Portal Mobile" />
-    </td>
-    <td valign="top" width="33.33%" align="center">
-      <p align="center"><strong>Admin Portal</strong></p>
-      <img src="./mobile2.png" alt="Admin Portal Mobile" />
-    </td>
-  </tr>
-</table>
+| Patient Portal | Doctor Portal | Admin Portal |
+| :---: | :---: | :---: |
+| ![Patient Portal Mobile](./mobile.png) | ![Doctor Portal Mobile](./mobile1.png) | ![Admin Portal Mobile](./mobile2.png) |
 
-*🩺 AI-PHMS UI Preview — Desktop Command Center and Mobile Responsive views.*
-
-</div>
+*AI-PHMS UI Preview — Desktop Command Center and Mobile Responsive views.*
 
 ---
 
-## 💡 Business Value & SEO
+## Business Value and SEO
 
 By balancing modern aesthetics with robust local security, AI-PHMS delivers immediate value:
 
@@ -109,59 +80,62 @@ By balancing modern aesthetics with robust local security, AI-PHMS delivers imme
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
-* 🩺 **Hospital Command Center** — Modern landing dashboard visualizing body-metric analytics (Brain, Lungs, Heart, Stomach, Liver), caloric tracking, and target compliance.
-* 🟢 **Patient Portal (AI-Powered)** — Drag-and-drop file upload for prescriptions (PDF, PNG, JPG) using real AI middleware to extract doctor details, cases, medicines, and lab values.
-* 🔵 **Doctor Portal** — Patient search index via unique ID, displaying lifetime health dashboards, Antibiotic Tracker, medication categorization blocks, and chronological test histories.
-* 🔍 **Deep-Dive Consultation Details** — View the complete, original breakdown of any single consultation date in a single dialog modal.
-* 🔴 **Admin Portal** — Manage access directories (Mock-register, suspend, activate, delete profiles) and inspect system audit logs.
-* ⚙️ **System Configuration** — Toggle light/dark mode and use configuration controls to reload seed datasets or purge local storage instantly.
-
----
-
-## 📋 Project Tasks & Phases
-
-### Phase 1 — Patient Portal & AI Extraction Foundation
-* **Project Setup**
-  * [x] Next.js project bootstrap with TypeScript & Tailwind CSS
-  * [x] Forced border-radius global layout tweaks (`rounded-xs` 2px border radius)
-* **AI Processing Module**
-  * [x] File upload center supporting images (PNG, JPEG) and PDF files
-  * [x] Google Gemini & OpenAI API integration Server Actions
-  * [x] Structured JSON Schema outputs for clinical metadata extraction
-* **Local Ledger Storage**
-  * [x] Date-wise parsing and storage of AI records inside browser `localStorage`
+- **Hospital Command Center** — Modern landing dashboard visualizing body-metric analytics (Brain, Lungs, Heart, Stomach, Liver), caloric tracking, and target compliance.
+- **Patient Portal (AI-Powered)** — Drag-and-drop file upload for prescriptions (PDF, PNG, JPG) using real AI middleware to extract doctor details, cases, medicines, and lab values.
+- **Doctor Portal** — Patient search index via unique ID, displaying lifetime health dashboards, Antibiotic Tracker, medication categorization blocks, and chronological test histories.
+- **Deep-Dive Consultation Details** — View the complete, original breakdown of any single consultation date in a single dialog modal.
+- **Admin Portal** — Manage access directories (Mock-register, suspend, activate, delete profiles) and inspect system audit logs.
+- **System Configuration** — Toggle light/dark mode and use configuration controls to reload seed datasets or purge local storage instantly.
 
 ---
 
-### Phase 2 — Doctor Portal & Clinical Tracking
-* **Patient Search Index**
-  * [x] Instant search index matching Patient ID or name
-* **Antibiotic Tracker**
-  * [x] Dedicated section showing lifetime usage, medicine name, and date history
-* **Medication Categorization Cards**
-  * [x] Separate blocks grouping historical data for Vitamins, Calcium, and Gastric meds
-* **Lab Test Analytics**
-  * [x] Chronological table view displaying past test results
-* **Deep-Dive Dialog**
-  * [x] Dialog modal displaying full original details of a consultation date
+## Project Tasks and Phases
+
+### Phase 1 — Patient Portal and AI Extraction Foundation
+
+- **Project Setup**
+  - [x] Next.js project bootstrap with TypeScript & Tailwind CSS
+  - [x] Forced border-radius global layout tweaks (`rounded-xs` 2px border radius)
+- **AI Processing Module**
+  - [x] File upload center supporting images (PNG, JPEG) and PDF files
+  - [x] Google Gemini & OpenAI API integration Server Actions
+  - [x] Structured JSON Schema outputs for clinical metadata extraction
+- **Local Ledger Storage**
+  - [x] Date-wise parsing and storage of AI records inside browser `localStorage`
 
 ---
 
-### Phase 3 — Admin Controls & Audit System
-* **Admin Dashboard**
-  * [x] Stats cards tracking active patients, active doctors, and total parsed docs
-* **Access Directory**
-  * [x] Register new profiles, suspend, activate, or delete patient and doctor IDs
-* **System Audit Logs**
-  * [x] Log ledger tracking successful document parses, registration, and status edits
-* **Settings & Seed Controls**
-  * [x] Pure localStorage flush controls and seed profile reloader
+### Phase 2 — Doctor Portal and Clinical Tracking
+
+- **Patient Search Index**
+  - [x] Instant search index matching Patient ID or name
+- **Antibiotic Tracker**
+  - [x] Dedicated section showing lifetime usage, medicine name, and date history
+- **Medication Categorization Cards**
+  - [x] Separate blocks grouping historical data for Vitamins, Calcium, and Gastric meds
+- **Lab Test Analytics**
+  - [x] Chronological table view displaying past test results
+- **Deep-Dive Dialog**
+  - [x] Dialog modal displaying full original details of a consultation date
 
 ---
 
-## 📦 Tech Stack & Architecture
+### Phase 3 — Admin Controls and Audit System
+
+- **Admin Dashboard**
+  - [x] Stats cards tracking active patients, active doctors, and total parsed docs
+- **Access Directory**
+  - [x] Register new profiles, suspend, activate, or delete patient and doctor IDs
+- **System Audit Logs**
+  - [x] Log ledger tracking successful document parses, registration, and status edits
+- **Settings & Seed Controls**
+  - [x] Pure localStorage flush controls and seed profile reloader
+
+---
+
+## Tech Stack and Architecture
 
 | Technology | Category | Purpose / Notes |
 | :--- | :--- | :--- |
@@ -178,9 +152,9 @@ By balancing modern aesthetics with robust local security, AI-PHMS delivers imme
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
-```
+```text
 src/
 ├── app/                          # Next.js App Router pages
 │   ├── actions/                  # Server Actions (process-document, extract.py)
@@ -203,14 +177,15 @@ src/
 │
 ├── hooks/                        # Custom React hooks (useMedicalRecords)
 ├── lib/                          # Schemas & utilities
-└── types/                        # Shared TypeScript definitions (index.ts)
+├── types/                        # Shared TypeScript definitions (index.ts)
 ```
 
 ---
 
-## 🛠️ Installation & Setup
+## Installation and Setup
 
 ### Prerequisites
+
 - Node.js `v18.x` or higher
 - npm or yarn
 
@@ -237,21 +212,17 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 🚢 Production Deployment
+## Production Deployment
 
-* **Frontend Hosting:** Deployed on **Vercel** (`ai-phms.vercel.app`).
-* **Deployment Pipeline:** Integrated with GitHub for automated CI/CD.
+- **Frontend Hosting:** Deployed on **Vercel** (`ai-phms.vercel.app`).
+- **Deployment Pipeline:** Integrated with GitHub for automated CI/CD.
 
 ---
 
-## 🤝 Social & Contributing
-
-<div align="center">
+## Social and Contributing
 
 Produced with absolute dedication and precision by **[CoderGUY47](https://github.com/CoderGUY47)**.
 
 *Join us in engineering the future of AI-powered clinical operations!*
 
 [![GitHub](https://img.shields.io/badge/GitHub-CoderGUY47-181717?style=for-the-badge&logo=github)](https://github.com/CoderGUY47)
-
-</div>
