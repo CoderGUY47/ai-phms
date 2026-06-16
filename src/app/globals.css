@@ -416,3 +416,26 @@ span[class*="badge"] {
   box-shadow: 0 0 6px rgba(14, 165, 233, 0.2), inset 0 0 2px rgba(14, 165, 233, 0.2) !important;
   text-shadow: 0 0 4px rgba(14, 165, 233, 0.15) !important;
 }
+
+/* Force multi-column grid layouts and horizontal flex rows to stack vertically in column format on mobile */
+@media (max-width: 767px) {
+  /* Match any grid layout excluding calendar months (grid-cols-7) and force to single column */
+  .grid:not(.grid-cols-7):not([class*="grid-cols-7"]) {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+
+  /* Reset all column-span elements to 1 column on mobile to prevent horizontal overflow */
+  [class*="col-span-"],
+  [class*="sm:col-span-"],
+  [class*="md:col-span-"],
+  [class*="lg:col-span-"],
+  [class*="xl:col-span-"] {
+    grid-column: span 1 / span 1 !important;
+  }
+
+  /* Force block sections using flex-row layouts to stack vertically on mobile */
+  .flex-row,
+  .flex-row-reverse {
+    flex-direction: column !important;
+  }
+}
