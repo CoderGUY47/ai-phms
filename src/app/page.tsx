@@ -95,7 +95,7 @@ export default function Dashboard() {
 
   return (
     <div className="space-y-6 animate-in fade-in duration-500 home-dashboard-page">
-      
+
       {/* hud header banner */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-muted pb-4">
         <div>
@@ -105,7 +105,7 @@ export default function Dashboard() {
           </div>
           <p className="text-sm text-muted-foreground font-mono mt-1">Real-time physiological diagnostics & neural synthesis node.</p>
         </div>
-        
+
         <div className="flex gap-2">
           {/* quick ai diagnostics confidence bar */}
           <div className="hidden lg:flex flex-col text-right justify-center border-l pl-4 border-muted">
@@ -122,13 +122,13 @@ export default function Dashboard() {
 
       {/* main grid layout */}
       <div className="grid grid-cols-1 xl:grid-cols-12 gap-6">
-        
+
         {/* left columns (col span 9) */}
         <div className="xl:col-span-9 space-y-6">
-          
+
           {/* top row: interactive vitals & hud anatomy scan */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
+
             {/* high-tech organ status hud list */}
             <BioDataChannels
               organsInfo={organsInfo}
@@ -151,7 +151,7 @@ export default function Dashboard() {
 
           {/* bottom row: calories stats chart & monthly progress panel */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-            
+
             {/* calories stats area chart */}
             <CaloricPerformance
               caloriesStatsData={caloriesStatsData}
@@ -168,7 +168,7 @@ export default function Dashboard() {
 
           {/* new section 1: department statistics (interactive bar chart) & live triage queue */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-            
+
             {/* interactive bar chart card */}
             <DepartmentStatistics
               deptStatsData={deptStatsData}
@@ -193,8 +193,8 @@ export default function Dashboard() {
           />
 
           {/* coded by antigravity credit section */}
-          <Card 
-            className="border shadow-none rounded-none bg-gradient-to-r from-primary/5 via-card to-primary/5 p-5 flex flex-col md:flex-row items-center justify-between gap-4 transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_0_15px_rgba(34,197,94,0.12)] cursor-pointer relative"
+          <Card
+            className="border shadow-none rounded-none bg-linear-to-r from-primary/5 via-card to-primary/5 p-5 flex flex-col md:flex-row items-center justify-between gap-4 transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_0_15px_rgba(34,197,94,0.12)] cursor-pointer relative"
             style={{ border: "1px solid var(--border)" }}
           >
             {/* SVG Gradient Definition */}
@@ -210,9 +210,9 @@ export default function Dashboard() {
 
             <div className="flex items-center gap-3">
               <div className="bg-primary/10 p-2.5 rounded-xs shrink-0 flex items-center justify-center border border-primary/20 shadow-[0_0_8px_rgba(34,197,94,0.1)]">
-                <Sparkles 
-                  className="h-5 w-5 animate-pulse" 
-                  style={{ stroke: "url(#antigravity-grad)", fill: "url(#antigravity-grad)", fillOpacity: 0.2 }} 
+                <Sparkles
+                  className="h-5 w-5 animate-pulse"
+                  style={{ stroke: "url(#antigravity-grad)", fill: "url(#antigravity-grad)", fillOpacity: 0.2 }}
                 />
               </div>
               <div>
@@ -232,7 +232,7 @@ export default function Dashboard() {
 
         {/* right columns (col span 3) — calendar, profile and schedule list */}
         <div className="xl:col-span-3 space-y-6">
-          
+
           {/* active check-in patient profile */}
           <ActiveConsultationCard />
 

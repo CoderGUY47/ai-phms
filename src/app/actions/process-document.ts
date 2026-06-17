@@ -41,7 +41,7 @@ async function processDirectJS(apiType: "gemini" | "openai", apiKey: string, bas
   } else {
     const ai = new GoogleGenAI({ apiKey });
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-pro",
+      model: "gemini-2.5-flash",
       contents: [
         {
           role: "user",
@@ -73,20 +73,43 @@ export async function processDocument(base64Image: string, mimeType: string, fil
   const isGeminiAvailable = !!process.env.GEMINI_API_KEY;
   const isOpenAIAvailable = !!process.env.OPENAI_API_KEY;
 
+  const fs = require("fs");
+  const path = require("path");
+  const logPath = path.join(process.cwd(), "process-debug.log");
+  const timestamp = new Date().toISOString();
+  
+  fs.appendFileSync(logPath, `\n--- [${timestamp}] processDocument called ---\n`);
+  fs.appendFileSync(logPath, `fileName: ${fileName}, mimeType: ${mimeType}\n`);
+  fs.appendFileSync(logPath, `isGeminiAvailable: ${isGeminiAvailable} (key: ${process.env.GEMINI_API_KEY ? process.env.GEMINI_API_KEY.substring(0, 10) + "..." : "undefined"})\n`);
+  fs.appendFileSync(logPath, `isOpenAIAvailable: ${isOpenAIAvailable}\n`);
+
   if (!isGeminiAvailable && !isOpenAIAvailable) {
-    // mock data fallback if neither key is set in env
+    fs.appendFileSync(logPath, `Fallback to mock data!\n`);
     await new Promise((resolve) => setTimeout(resolve, 1500));
     const data = getMockExtraction(fileName);
+    fs.appendFileSync(logPath, `Mock data returned: ${JSON.stringify(data, null, 2)}\n`);
     return { success: true, data };
   }
 
   const apiType = isOpenAIAvailable && !isGeminiAvailable ? "openai" : "gemini";
   const apiKey = apiType === "openai" ? process.env.OPENAI_API_KEY! : process.env.GEMINI_API_KEY!;
+  fs.appendFileSync(logPath, `apiType: ${apiType}\n`);
+
+  try {
+    const ext = mimeType.split("/")[1] || "png";
+    const debugImgPath = path.join(process.cwd(), `uploaded-debug-image.${ext}`);
+    fs.writeFileSync(debugImgPath, Buffer.from(base64Image, "base64"));
+    fs.appendFileSync(logPath, `Saved uploaded image to: ${debugImgPath}\n`);
+  } catch (err) {
+    fs.appendFileSync(logPath, `Failed to save debug image: ${err.message}\n`);
+  }
 
   try {
     const data = await processDirectJS(apiType, apiKey, base64Image, mimeType);
+    fs.appendFileSync(logPath, `API Extraction Success! Data: ${JSON.stringify(data, null, 2)}\n`);
     return { success: true, data };
   } catch (error) {
+    fs.appendFileSync(logPath, `API Extraction Error: ${error.stack || error.message || error}\n`);
     console.error("AI processing error:", error);
     return { success: false, error: "Failed to process document. Please verify your API key or try again." };
   }
