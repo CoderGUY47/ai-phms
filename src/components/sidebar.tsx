@@ -28,7 +28,6 @@ export function Sidebar() {
   // state to track if the mobile navigation drawer is open
   const [isOpen, setIsOpen] = useState(false);
 
-
   return (
     <>
       <header className="md:hidden flex h-14 w-full items-center justify-between border-b bg-card px-4 sticky top-0 z-50">
@@ -56,7 +55,9 @@ export function Sidebar() {
           <Button
             variant="ghost"
             size="icon"
-            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-label={
+              isOpen ? "Close navigation menu" : "Open navigation menu"
+            }
             title={isOpen ? "Close navigation menu" : "Open navigation menu"}
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -68,9 +69,9 @@ export function Sidebar() {
       {/* Mobile-only banner image below navbar */}
       <div className="md:hidden w-full flex justify-center items-center overflow-hidden border-b bg-card/65 backdrop-blur-md">
         <img
-          src="/assets/left-bottom.png"
+          src="/assets/mobile-banner.png"
           alt="Sidebar Analytics Panel"
-          className="w-full h-auto object-cover max-h-16"
+          className="w-full h-[200px] object-cover object-[center_30%]"
         />
       </div>
 
