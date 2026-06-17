@@ -31,7 +31,6 @@ export function Sidebar() {
 
   return (
     <>
-      {/* mobile top navigation bar shown only on smaller screens */}
       <header className="md:hidden flex h-14 w-full items-center justify-between border-b bg-card px-4 sticky top-0 z-50">
         <Link href="/" className="flex items-center gap-2">
           <div className="flex items-center justify-center shrink-0 rounded-full border border-primary/20 bg-primary/10 h-8 w-8">
@@ -65,6 +64,15 @@ export function Sidebar() {
           </Button>
         </div>
       </header>
+
+      {/* Mobile-only banner image below navbar */}
+      <div className="md:hidden w-full flex justify-center items-center overflow-hidden border-b bg-card/65 p-3 backdrop-blur-md">
+        <img
+          src="/assets/left-bottom.png"
+          alt="Sidebar Analytics Panel"
+          className="h-10 w-auto object-contain"
+        />
+      </div>
 
       {/* main desktop sidebar navigation drawer */}
       <aside
