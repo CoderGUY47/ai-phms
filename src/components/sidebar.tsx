@@ -66,11 +66,11 @@ export function Sidebar() {
       </header>
 
       {/* Mobile-only banner image below navbar */}
-      <div className="md:hidden w-full flex justify-center items-center overflow-hidden border-b bg-card/65 p-3 backdrop-blur-md">
+      <div className="md:hidden w-full flex justify-center items-center overflow-hidden border-b bg-card/65 backdrop-blur-md">
         <img
           src="/assets/left-bottom.png"
           alt="Sidebar Analytics Panel"
-          className="h-10 w-auto object-contain"
+          className="w-full h-auto object-cover max-h-16"
         />
       </div>
 
