@@ -13,10 +13,10 @@ interface Organ {
 }
 
 interface BioDataChannelsProps {
-  organsInfo: Record<string, Organ>;
+  organsInfo: { [key: string]: Organ };
   selectedOrgan: string;
-  setSelectedOrgan: (organ: string) => void;
-  setActiveTab: (tab: "composition" | "anatomy") => void;
+  setSelectedOrgan: (organ: string) => any;
+  setActiveTab: (tab: "composition" | "anatomy") => any;
 }
 
 export default function BioDataChannels({

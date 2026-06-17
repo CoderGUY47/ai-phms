@@ -526,8 +526,8 @@ export default function PatientPortal() {
 interface RecordTimelineCardProps {
   record: MedicalRecord;
   doctorsList: Doctor[];
-  onDelete: () => void;
-  onUpdate: (updatedRecord: MedicalRecord) => void;
+  onDelete: () => any;
+  onUpdate: (updatedRecord: MedicalRecord) => any;
 }
 
 function RecordTimelineCard({ record, doctorsList, onDelete, onUpdate }: RecordTimelineCardProps) {

@@ -22,6 +22,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { toast } from "react-toastify";
 
 export default function DoctorPortal() {
   return (
@@ -116,7 +117,7 @@ function DoctorContent() {
       setSelected(match);
     } else {
       setSelected(null);
-      alert("No patient found with that ID or name.");
+      toast.error("No patient found with that ID or name.");
     }
   };
 

@@ -15,7 +15,7 @@ interface PrescriptionScanItem {
 interface PrescriptionIngestionFeedProps {
   prescriptionScanLogs: PrescriptionScanItem[];
   searchScanQuery: string;
-  setSearchScanQuery: (query: string) => void;
+  setSearchScanQuery: (query: string) => any;
 }
 
 export default function PrescriptionIngestionFeed({

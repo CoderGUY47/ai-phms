@@ -252,7 +252,7 @@ function StatCard({ icon: Icon, label, value, color }: { icon: React.ComponentTy
 }
 
 /* ── register patient dialog ── */
-function RegisterPatientDialog({ onRegister }: { onRegister: (p: { id: string; name: string; age: number; gender: "Male" | "Female" | "Other"; phone: string }) => void }) {
+function RegisterPatientDialog({ onRegister }: { onRegister: (p: { id: string; name: string; age: number; gender: "Male" | "Female" | "Other"; phone: string }) => any }) {
   const [open, setOpen] = useState(false);
   const [form, setForm] = useState({ name: "", age: "", gender: "Male" as "Male" | "Female" | "Other", phone: "" });
   const submit = () => {
@@ -286,7 +286,7 @@ function RegisterPatientDialog({ onRegister }: { onRegister: (p: { id: string; n
 }
 
 /* ── register doctor dialog ── */
-function RegisterDoctorDialog({ onRegister }: { onRegister: (d: { id: string; name: string; specialty: string; hospital: string; experience: string; phone: string; email: string }) => void }) {
+function RegisterDoctorDialog({ onRegister }: { onRegister: (d: { id: string; name: string; specialty: string; hospital: string; experience: string; phone: string; email: string }) => any }) {
   const [open, setOpen] = useState(false);
   const [form, setForm] = useState({ name: "", specialty: "", hospital: "", experience: "", phone: "", email: "" });
   const submit = () => {

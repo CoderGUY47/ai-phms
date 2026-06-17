@@ -7,8 +7,8 @@ import { ChevronRight, Download, Activity, Calendar, User, Clock, Stethoscope, H
 interface SchedulesListProps {
   calendarMonth: string;
   selectedCalendarDay: number;
-  setSelectedCalendarDay: (day: number) => void;
-  setCalendarMonth: (month: string) => void;
+  setSelectedCalendarDay: (day: number) => any;
+  setCalendarMonth: (month: string) => any;
 }
 
 export default function SchedulesList({

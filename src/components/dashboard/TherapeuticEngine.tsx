@@ -12,7 +12,7 @@ interface SubTargetItem {
 interface TherapeuticEngineProps {
   subTargetsData: SubTargetItem[];
   isHoveredProgress: boolean;
-  setIsHoveredProgress: (hovered: boolean) => void;
+  setIsHoveredProgress: (hovered: boolean) => any;
 }
 
 export default function TherapeuticEngine({

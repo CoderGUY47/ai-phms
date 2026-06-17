@@ -14,7 +14,7 @@ interface TriageLogItem {
 interface LiveTriageProps {
   triageLogs: TriageLogItem[];
   triageFilter: string;
-  setTriageFilter: (filter: string) => void;
+  setTriageFilter: (filter: string) => any;
 }
 
 export default function LiveTriage({ triageLogs, triageFilter, setTriageFilter }: LiveTriageProps) {

@@ -7,10 +7,10 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 interface CalendarWidgetProps {
   calendarMonth: string;
   selectedCalendarDay: number;
-  setSelectedCalendarDay: (day: number) => void;
-  handleMonthPrev: () => void;
-  handleMonthNext: () => void;
-  handleSelectToday: () => void;
+  setSelectedCalendarDay: (day: number) => any;
+  handleMonthPrev: () => any;
+  handleMonthNext: () => any;
+  handleSelectToday: () => any;
   getDaysArray: () => number[];
 }
 

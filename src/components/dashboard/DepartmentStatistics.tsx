@@ -12,7 +12,7 @@ interface DeptStatsItem {
 interface DepartmentStatisticsProps {
   deptStatsData: DeptStatsItem[];
   chartMode: "both" | "doctors" | "patients";
-  setChartMode: (mode: "both" | "doctors" | "patients") => void;
+  setChartMode: (mode: "both" | "doctors" | "patients") => any;
 }
 
 export default function DepartmentStatistics({
@@ -34,7 +34,7 @@ export default function DepartmentStatistics({
           </CardDescription>
         </div>
         <div className="flex border text-[10px] font-bold font-mono">
-          {(["both", "doctors", "patients"] as const).map((mode) => (
+          {(["both", "doctors", "patients"] as any[]).map((mode) => (
             <button
               key={mode}
               onClick={() => setChartMode(mode)}

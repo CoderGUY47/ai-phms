@@ -35,7 +35,7 @@ export default function ReportsPage() {
   const suspendedCount = patients.filter((p) => p.status === "Suspended").length;
 
   // medicine classifications
-  const classificationCounts: Record<string, number> = {};
+  const classificationCounts: { [key: string]: number } = {};
   records.flatMap((r) => r.medicines).forEach((med) => {
     const cls = med.classification || "General";
     classificationCounts[cls] = (classificationCounts[cls] || 0) + 1;

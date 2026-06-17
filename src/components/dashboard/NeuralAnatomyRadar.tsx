@@ -20,11 +20,11 @@ interface BodyCompositionItem {
 }
 
 interface NeuralAnatomyRadarProps {
-  organsInfo: Record<string, Organ>;
+  organsInfo: { [key: string]: Organ };
   selectedOrgan: string;
-  setSelectedOrgan: (organ: string) => void;
+  setSelectedOrgan: (organ: string) => any;
   activeTab: "composition" | "anatomy";
-  setActiveTab: (tab: "composition" | "anatomy") => void;
+  setActiveTab: (tab: "composition" | "anatomy") => any;
   bodyCompositionData: BodyCompositionItem[];
 }
 

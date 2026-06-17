@@ -9,27 +9,30 @@ const DOCTORS_KEY = "ai-phms-doctors";
 const RECORDS_KEY = "ai-phms-records";
 const AUDIT_KEY = "ai-phms-audit";
 
-function readLS<T>(key: string): T | null {
+// Simplified read from localStorage without complex generics
+function readLS(key: string): any {
   try {
     const raw = localStorage.getItem(key);
-    return raw ? (JSON.parse(raw) as T) : null;
+    return raw ? JSON.parse(raw) : null;
   } catch {
     return null;
   }
 }
 
-function writeLS<T>(key: string, data: T) {
+// Simplified write to localStorage
+function writeLS(key: string, data: any) {
   localStorage.setItem(key, JSON.stringify(data));
 }
 
+// Simplified audit function
 function addAudit(
   action: string,
-  entityType: AuditLog["entityType"],
+  entityType: string,
   entityId: string,
   entityName: string,
-  status: "SUCCESS" | "FAILED" = "SUCCESS"
+  status: string = "SUCCESS"
 ) {
-  const logs: AuditLog[] = readLS<AuditLog[]>(AUDIT_KEY) || [];
+  const logs: any[] = readLS(AUDIT_KEY) || [];
   logs.unshift({
     id: uuidv4(),
     timestamp: new Date().toISOString(),
@@ -53,7 +56,7 @@ export function useMedicalRecords() {
     fetch("/data/patients.json")
       .then((r) => r.json())
       .then((seedPatients: Patient[]) => {
-        const lsPatients: Patient[] = readLS<Patient[]>(PATIENTS_KEY) || [];
+        const lsPatients: Patient[] = readLS(PATIENTS_KEY) || [];
         // merge: localstorage versions override seed for same id
         const lsMap = new Map(lsPatients.map((p) => [p.id, p]));
         const merged = seedPatients.map((sp) => lsMap.get(sp.id) ?? sp);
@@ -63,7 +66,7 @@ export function useMedicalRecords() {
         });
         setPatients(merged);
 
-        const lsRecords: MedicalRecord[] = readLS<MedicalRecord[]>(RECORDS_KEY) || [];
+        const lsRecords: MedicalRecord[] = readLS(RECORDS_KEY) || [];
         const seedRecords = seedPatients.flatMap((p) => p.history);
         const allRecordIds = new Set(lsRecords.map((r) => r.recordId));
         const merged2 = [...lsRecords, ...seedRecords.filter((r) => !allRecordIds.has(r.recordId))];
@@ -72,8 +75,8 @@ export function useMedicalRecords() {
         setIsLoaded(true);
       })
       .catch(() => {
-        const lsPatients: Patient[] = readLS<Patient[]>(PATIENTS_KEY) || [];
-        const lsRecords: MedicalRecord[] = readLS<MedicalRecord[]>(RECORDS_KEY) || [];
+        const lsPatients: Patient[] = readLS(PATIENTS_KEY) || [];
+        const lsRecords: MedicalRecord[] = readLS(RECORDS_KEY) || [];
         setPatients(lsPatients);
         setRecords(lsRecords);
         setIsLoaded(true);
@@ -84,7 +87,7 @@ export function useMedicalRecords() {
     (record: MedicalRecord) => {
       const newRecords = [record, ...records];
       setRecords(newRecords);
-      const lsRecords: MedicalRecord[] = readLS<MedicalRecord[]>(RECORDS_KEY) || [];
+      const lsRecords: MedicalRecord[] = readLS(RECORDS_KEY) || [];
       writeLS(RECORDS_KEY, [record, ...lsRecords]);
 
       const updated = patients.map((p) => {
@@ -142,7 +145,7 @@ export function useMedicalRecords() {
   );
 
   const registerPatient = useCallback(
-    (patient: Omit<Patient, "history" | "status">) => {
+    (patient: any) => {
       const newPatient: Patient = { ...patient, status: "Active", history: [] };
       const updated = [newPatient, ...patients];
       setPatients(updated);
@@ -154,7 +157,7 @@ export function useMedicalRecords() {
 
   const suspendPatient = useCallback(
     (id: string) => {
-      const updated = patients.map((p) => (p.id === id ? { ...p, status: "Suspended" as const } : p));
+      const updated = patients.map((p) => (p.id === id ? { ...p, status: "Suspended" as "Suspended" } : p));
       setPatients(updated);
       writeLS(PATIENTS_KEY, updated);
       const p = patients.find((x) => x.id === id);
@@ -165,7 +168,7 @@ export function useMedicalRecords() {
 
   const activatePatient = useCallback(
     (id: string) => {
-      const updated = patients.map((p) => (p.id === id ? { ...p, status: "Active" as const } : p));
+      const updated = patients.map((p) => (p.id === id ? { ...p, status: "Active" as "Active" } : p));
       setPatients(updated);
       writeLS(PATIENTS_KEY, updated);
       const p = patients.find((x) => x.id === id);
@@ -215,7 +218,7 @@ export function useMedicalRecords() {
 export function useAuditLogs() {
   const [logs, setLogs] = useState<AuditLog[]>([]);
   useEffect(() => {
-    setLogs(readLS<AuditLog[]>(AUDIT_KEY) || []);
+    setLogs(readLS(AUDIT_KEY) || []);
   }, []);
   return logs;
 }
@@ -227,19 +230,19 @@ export function useDoctors() {
     fetch("/data/doctors.json")
       .then((r) => r.json())
       .then((seed: Doctor[]) => {
-        const lsDoctors: Doctor[] = readLS<Doctor[]>(DOCTORS_KEY) || [];
+        const lsDoctors: Doctor[] = readLS(DOCTORS_KEY) || [];
         const lsMap = new Map(lsDoctors.map((d) => [d.id, d]));
         const merged = seed.map((s) => lsMap.get(s.id) ?? s);
         lsDoctors.forEach((d) => { if (!merged.find((m) => m.id === d.id)) merged.push(d); });
         setDoctors(merged);
       })
-      .catch(() => setDoctors(readLS<Doctor[]>(DOCTORS_KEY) || []));
+      .catch(() => setDoctors(readLS(DOCTORS_KEY) || []));
   }, []);
 
   useEffect(() => { reload(); }, [reload]);
 
   const registerDoctor = useCallback(
-    (doctor: Omit<Doctor, "status" | "totalPatients">) => {
+    (doctor: any) => {
       const newDoc: Doctor = { ...doctor, status: "Active", totalPatients: 0 };
       const updated = [newDoc, ...doctors];
       setDoctors(updated);
@@ -251,7 +254,7 @@ export function useDoctors() {
 
   const suspendDoctor = useCallback(
     (id: string) => {
-      const updated = doctors.map((d) => (d.id === id ? { ...d, status: "Suspended" as const } : d));
+      const updated = doctors.map((d) => (d.id === id ? { ...d, status: "Suspended" as "Suspended" } : d));
       setDoctors(updated);
       writeLS(DOCTORS_KEY, updated);
       const d = doctors.find((x) => x.id === id);
@@ -262,7 +265,7 @@ export function useDoctors() {
 
   const activateDoctor = useCallback(
     (id: string) => {
-      const updated = doctors.map((d) => (d.id === id ? { ...d, status: "Active" as const } : d));
+      const updated = doctors.map((d) => (d.id === id ? { ...d, status: "Active" as "Active" } : d));
       setDoctors(updated);
       writeLS(DOCTORS_KEY, updated);
       const d = doctors.find((x) => x.id === id);
