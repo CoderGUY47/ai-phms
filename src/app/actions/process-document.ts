@@ -100,16 +100,16 @@ export async function processDocument(base64Image: string, mimeType: string, fil
     const debugImgPath = path.join(process.cwd(), `uploaded-debug-image.${ext}`);
     fs.writeFileSync(debugImgPath, Buffer.from(base64Image, "base64"));
     fs.appendFileSync(logPath, `Saved uploaded image to: ${debugImgPath}\n`);
-  } catch (err) {
-    fs.appendFileSync(logPath, `Failed to save debug image: ${err.message}\n`);
+  } catch (err: any) {
+    fs.appendFileSync(logPath, `Failed to save debug image: ${err?.message || err}\n`);
   }
 
   try {
     const data = await processDirectJS(apiType, apiKey, base64Image, mimeType);
     fs.appendFileSync(logPath, `API Extraction Success! Data: ${JSON.stringify(data, null, 2)}\n`);
     return { success: true, data };
-  } catch (error) {
-    fs.appendFileSync(logPath, `API Extraction Error: ${error.stack || error.message || error}\n`);
+  } catch (error: any) {
+    fs.appendFileSync(logPath, `API Extraction Error: ${error?.stack || error?.message || error}\n`);
     console.error("AI processing error:", error);
     return { success: false, error: "Failed to process document. Please verify your API key or try again." };
   }
